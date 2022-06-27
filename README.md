@@ -1,8 +1,6 @@
-# DSpace::Client
+# DSpace REST API Client
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dspace/client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Ruby DSpace REST API client.
 
 ## Installation
 
@@ -10,19 +8,19 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'dspace-client'
+bundle install
 ```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install dspace-client
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+config = DSpace::Configuration.new({rest_url: '', username: '', password: ''})
+# Or find config from env or file ~/.dspaceclientrc
+config = DSpace::Configuration.find # raises error if not found
+
+client = DSpace::Client.new(config)
+client.login
+```
 
 ## Development
 

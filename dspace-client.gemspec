@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name          = "dspace-client"
   spec.version       = DSpace::Client::VERSION
   spec.authors       = ["Mark Cooper"]
-  spec.email         = ["mark.c.cooper@outlook.com"]
+  spec.email         = ["mark.cooper@lyrasis.org"]
 
   spec.summary       = "DSpace REST API client"
   spec.description   = "DSpace REST API client"

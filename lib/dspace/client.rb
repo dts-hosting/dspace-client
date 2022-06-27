@@ -2,7 +2,7 @@
 
 require_relative "client/version"
 
-module Dspace
+module DSpace
   module Client
     class Error < StandardError; end
     # Your code goes here...

@@ -4,7 +4,7 @@ require_relative "lib/dspace/client/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "dspace-client"
-  spec.version       = Dspace::Client::VERSION
+  spec.version       = DSpace::Client::VERSION
   spec.authors       = ["Mark Cooper"]
   spec.email         = ["mark.c.cooper@outlook.com"]
 

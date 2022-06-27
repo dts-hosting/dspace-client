@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Dspace
+module DSpace
   module Client
     VERSION = "0.1.0"
   end

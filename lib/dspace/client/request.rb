@@ -27,12 +27,13 @@ module DSpace
     end
 
     def login_request
-      # Get a XSRF token
+      # 1. Get a XSRF token
       response = client.connection.post("authn/login") do |req|
         handle_request_for_authentication(req)
       end
       refresh_token(response)
 
+      # 2. Repeat with XSRF token
       response = client.connection.post("authn/login") do |req|
         handle_request_for_authentication(req)
       end
@@ -84,7 +85,7 @@ module DSpace
       when 401
         raise Error, "Invalid authentication credentials. #{response.body["error"]}"
       when 403
-        raise Error, "Not allowed to perform that action. #{response.body["error"]}"
+        raise Error, "Not allowed to perform the action. #{response.body["error"]}"
       when 404
         raise Error, "No results found for request. #{response.body["error"]}"
       when 429

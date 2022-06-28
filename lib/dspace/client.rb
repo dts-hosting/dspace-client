@@ -9,7 +9,7 @@ require_relative "client/configuration"
 require_relative "client/request"
 require_relative "client/version"
 
-require_relative "client/resources/login"
+require_relative "client/resources/authn"
 
 # DSpace
 module DSpace

@@ -13,12 +13,19 @@ module DSpace
       @token         = nil
     end
 
+    # Expose basic operations: (get, post, put, delete)
     def get(path, params = {}, headers = {})
       DSpace::Request.new(client: self).get_request(path, params, headers)
     end
 
+    # Authentication is special
     def login
-      DSpace::LoginResource.new(client: self).login
+      DSpace::AuthnResource.new(client: self).create
+    end
+
+    # Resources
+    def users
+      DSpace::UserResource.new(client: self)
     end
 
     def connection

@@ -34,5 +34,6 @@ Gem::Specification.new do |spec|
   # guide at: https://bundler.io/guides/creating_gem.html
 
   spec.add_dependency "faraday", "~> 1.10"
+  spec.add_dependency "faraday-cookie_jar"
   spec.add_dependency "faraday_middleware", "~> 1.2"
 end

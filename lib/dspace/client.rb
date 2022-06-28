@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "faraday"
+require "faraday-cookie_jar"
 require "faraday_middleware"
 
 require_relative "client/services/login"

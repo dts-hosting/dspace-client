@@ -10,4 +10,6 @@ config = DSpace::Configuration.new(settings: {
                                    })
 client = DSpace::Client.new(config: config)
 puts client.login
-puts client.get("core/items").body
+response = client.get("core/items")
+puts response.status
+puts response.body

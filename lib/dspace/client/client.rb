@@ -4,12 +4,22 @@
 module DSpace
   # REST API Client
   class Client
-    include DSpace::Request
+    # include DSpace::Request
+    attr_accessor :authorization, :token
+    attr_reader   :config
 
     def initialize(config:)
       @authorization = nil
       @config        = config
       @token         = nil
+    end
+
+    def get(path, params = {}, headers = {})
+      DSpace::Request.new(client: self).get_request(path, params, headers)
+    end
+
+    def login
+      DSpace::LoginResource.new(client: self).login
     end
 
     def connection

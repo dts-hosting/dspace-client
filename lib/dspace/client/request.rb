@@ -3,31 +3,37 @@
 # DSpace
 module DSpace
   # Request
-  module Request
-    def delete(path, params = {}, headers = {})
-      response = connection.delete(path) do |req|
+  class Request
+    attr_reader :client
+
+    def initialize(client:)
+      @client = client
+    end
+
+    def delete_request(path, params = {}, headers = {})
+      response = client.connection.delete(path) do |req|
         handle_request(req, params, headers)
       end
       refresh_token(response)
       handle_response(response)
     end
 
-    def get(path, params = {}, headers = {})
-      response = connection.get(path) do |req|
+    def get_request(path, params = {}, headers = {})
+      response = client.connection.get(path) do |req|
         handle_request(req, params, headers)
       end
       refresh_token(response)
       handle_response(response)
     end
 
-    def login
+    def login_request
       # Get a XSRF token
-      response = connection.post("authn/login") do |req|
+      response = client.connection.post("authn/login") do |req|
         handle_request_for_authentication(req)
       end
       refresh_token(response)
 
-      response = connection.post("authn/login") do |req|
+      response = client.connection.post("authn/login") do |req|
         handle_request_for_authentication(req)
       end
       refresh_authorization(response)
@@ -35,16 +41,16 @@ module DSpace
       handle_response(response)
     end
 
-    def post(path, body, params = {}, headers = {})
-      response = connection.post(path) do |req|
+    def post_request(path, body, params = {}, headers = {})
+      response = client.connection.post(path) do |req|
         handle_request_with_payload(req, body, params, headers)
       end
       refresh_token(response)
       handle_response(response)
     end
 
-    def put(path, body, params = {}, headers = {})
-      response = connection.patch(path) do |req|
+    def put_request(path, body, params = {}, headers = {})
+      response = client.connection.patch(path) do |req|
         handle_request_with_payload(req, body, params, headers)
       end
       refresh_token(response)
@@ -55,20 +61,20 @@ module DSpace
 
     def handle_request(req, params, headers)
       req.params  = params
-      req.headers = headers.merge({ "X-XSRF-Token" => @token })
-      req.headers["Authorization"] = @authorization if @authorization
+      req.headers = headers.merge({ "X-XSRF-Token" => client.token })
+      req.headers["Authorization"] = client.authorization if client.authorization
     end
 
     def handle_request_for_authentication(req)
-      req.body = URI.encode_www_form({ user: @config.username, password: @config.password })
+      req.body = URI.encode_www_form({ user: client.config.username, password: client.config.password })
       req.headers["Content-Type"] = "application/x-www-form-urlencoded"
-      req.headers["X-XSRF-Token"] = @token
+      req.headers["X-XSRF-Token"] = client.token
     end
 
     def handle_request_with_payload(req, body, params, headers)
       req.body    = body
       req.params  = params
-      req.headers = headers.merge({ "Authorization" => @authorization, "X-XSRF-Token" => @token })
+      req.headers = headers.merge({ "Authorization" => client.authorization, "X-XSRF-Token" => client.token })
     end
 
     def handle_response(response)
@@ -93,12 +99,12 @@ module DSpace
     end
 
     def refresh_authorization(response)
-      @authorization = response.headers["Authorization"] if response.headers.key?("Authorization")
+      client.authorization = response.headers["Authorization"] if response.headers.key?("Authorization")
       response
     end
 
     def refresh_token(response)
-      @token = response.headers["DSPACE-XSRF-TOKEN"] if response.headers.key?("DSPACE-XSRF-TOKEN")
+      client.token = response.headers["DSPACE-XSRF-TOKEN"] if response.headers.key?("DSPACE-XSRF-TOKEN")
       response
     end
   end

@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
+# Dspace
 module DSpace
-  module Client
+  class Client
     VERSION = "0.1.0"
   end
 end

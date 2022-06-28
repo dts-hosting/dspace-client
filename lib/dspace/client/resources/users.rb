@@ -12,23 +12,19 @@ module DSpace
     end
 
     def create(**_attributes)
-      # DSpace::User.new post_request(ENDPOINT, body: attributes).body["eperson"]
-      raise "Not implemented"
+      DSpace::User.new JSON.parse(post_request(ENDPOINT, body: attributes).body)
     end
 
     def retrieve(uuid:)
-      # DSpace::User.new get_request("#{ENDPOINT}/#{uuid}").body["eperson"]
-      raise "Not implemented"
+      DSpace::User.new JSON.parse(get_request("#{ENDPOINT}/#{uuid}").body)
     end
 
     def update(uuid:, **_attributes)
-      # patch_request("#{ENDPOINT}/#{uuid}", body: attributes)
-      raise "Not implemented"
+      put_request("#{ENDPOINT}/#{uuid}", body: attributes)
     end
 
     def delete(uuid:)
-      # delete_request("#{ENDPOINT}/#{uuid}")
-      raise "Not implemented"
+      delete_request("#{ENDPOINT}/#{uuid}")
     end
   end
 end

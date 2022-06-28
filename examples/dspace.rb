@@ -11,6 +11,6 @@ config = DSpace::Configuration.new(settings: {
 client = DSpace::Client.new(config: config)
 client.login
 
-client.users.all.each do |user|
-  puts user
-end
+# client.users.all.each { |user| puts user }
+users = client.users.list.data
+puts client.users.retrieve(uuid: users.first.uuid)

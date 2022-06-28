@@ -4,7 +4,6 @@
 module DSpace
   # REST API Client
   class Client
-    # include DSpace::Request
     attr_accessor :authorization, :token
     attr_reader   :config
 

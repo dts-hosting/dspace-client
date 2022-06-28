@@ -10,49 +10,44 @@ module DSpace
       @client = client
     end
 
-    def delete_request(path, params = {}, headers = {})
+    def all
+      Enumerator.new do |yielder|
+        records = list(page: 0)
+        records.data.each { |d| yielder << d }
+        while records.next_page
+          records = list(page: records.next_page)
+          records.data.each { |d| yielder << d }
+        end
+      end.lazy
+    end
+
+    def delete_request(path, params: {}, headers: {})
       response = client.connection.delete(path) do |req|
-        handle_request(req, params, headers)
+        handle_request(req, params: params, headers: headers)
       end
       refresh_token(response)
       handle_response(response)
     end
 
-    def get_request(path, params = {}, headers = {})
+    def get_request(path, params: {}, headers: {})
       response = client.connection.get(path) do |req|
-        handle_request(req, params, headers)
+        handle_request(req, params: params, headers: headers)
       end
       refresh_token(response)
       handle_response(response)
     end
 
-    def login_request
-      # 1. Get a XSRF token
-      response = client.connection.post("authn/login") do |req|
-        handle_request_for_authentication(req)
-      end
-      refresh_token(response)
-
-      # 2. Repeat with XSRF token
-      response = client.connection.post("authn/login") do |req|
-        handle_request_for_authentication(req)
-      end
-      refresh_authorization(response)
-      refresh_token(response)
-      handle_response(response)
-    end
-
-    def post_request(path, body, params = {}, headers = {})
+    def post_request(path, body:, params: {}, headers: {})
       response = client.connection.post(path) do |req|
-        handle_request_with_payload(req, body, params, headers)
+        handle_request_with_payload(req, body: body, params: params, headers: headers)
       end
       refresh_token(response)
       handle_response(response)
     end
 
-    def put_request(path, body, params = {}, headers = {})
+    def put_request(path, body:, params: {}, headers: {})
       response = client.connection.patch(path) do |req|
-        handle_request_with_payload(req, body, params, headers)
+        handle_request_with_payload(req, body: body, params: params, headers: headers)
       end
       refresh_token(response)
       handle_response(response)
@@ -60,7 +55,7 @@ module DSpace
 
     private
 
-    def handle_request(req, params, headers)
+    def handle_request(req, params:, headers:)
       req.params  = params
       req.headers = headers.merge({ "X-XSRF-Token" => client.token })
       req.headers["Authorization"] = client.authorization if client.authorization
@@ -72,7 +67,7 @@ module DSpace
       req.headers["X-XSRF-Token"] = client.token
     end
 
-    def handle_request_with_payload(req, body, params, headers)
+    def handle_request_with_payload(req, body:, params:, headers:)
       req.body    = body
       req.params  = params
       req.headers = headers.merge({ "Authorization" => client.authorization, "X-XSRF-Token" => client.token })
@@ -97,6 +92,22 @@ module DSpace
       end
 
       response
+    end
+
+    def login_request
+      # 1. Get a XSRF token
+      response = client.connection.post("authn/login") do |req|
+        handle_request_for_authentication(req)
+      end
+      refresh_token(response)
+
+      # 2. Repeat with XSRF token
+      response = client.connection.post("authn/login") do |req|
+        handle_request_for_authentication(req)
+      end
+      refresh_authorization(response)
+      refresh_token(response)
+      handle_response(response)
     end
 
     def refresh_authorization(response)

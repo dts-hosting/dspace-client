@@ -9,7 +9,8 @@ config = DSpace::Configuration.new(settings: {
                                      password: "direct!"
                                    })
 client = DSpace::Client.new(config: config)
-puts client.login
-response = client.get("core/items")
-puts response.status
-puts response.body
+client.login
+
+client.users.all.each do |user|
+  puts user
+end

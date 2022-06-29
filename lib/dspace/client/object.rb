@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "ostruct"
 
 module DSpace
@@ -8,9 +10,10 @@ module DSpace
     end
 
     def to_ostruct(obj)
-      if obj.is_a?(Hash)
-        OpenStruct.new(obj.map { |key, val| [key, to_ostruct(val)] }.to_h)
-      elsif obj.is_a?(Array)
+      case obj
+      when Hash
+        OpenStruct.new(obj.transform_values { |val| to_ostruct(val) })
+      when Array
         obj.map { |o| to_ostruct(o) }
       else # Assumed to be a primitive value
         obj

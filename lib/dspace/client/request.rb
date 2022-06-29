@@ -73,6 +73,7 @@ module DSpace
       req.headers = headers.merge({ "Authorization" => client.authorization, "X-XSRF-Token" => client.token })
     end
 
+    # rubocop:disable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength
     def handle_response(response)
       case response.status
       when 400
@@ -93,6 +94,7 @@ module DSpace
 
       response
     end
+    # rubocop:enable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength
 
     def login_request
       # 1. Get a XSRF token

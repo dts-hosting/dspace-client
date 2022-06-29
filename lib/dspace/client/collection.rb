@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module DSpace
-  # Collection
   class Collection
     attr_reader :data, :page, :size, :total_pages, :next_page, :prev_page, :last_page
 

@@ -2,7 +2,6 @@
 
 # DSpace
 module DSpace
-  # Request
   class Request
     attr_reader :client
 

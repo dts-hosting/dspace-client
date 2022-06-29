@@ -42,6 +42,7 @@ GEM
       faraday (~> 1.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
+    minitest (5.15.0)
     multipart-post (2.1.1)
     parallel (1.22.1)
     parser (3.1.2.0)
@@ -73,6 +74,7 @@ PLATFORMS
 
 DEPENDENCIES
   dspace-client!
+  minitest (>= 5.0.5)
   rake (~> 13.0)
   rubocop (~> 1.7)
 

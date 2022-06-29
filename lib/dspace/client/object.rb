@@ -3,7 +3,6 @@
 require "ostruct"
 
 module DSpace
-  # Object
   class Object < OpenStruct
     def initialize(attributes)
       super to_ostruct(attributes)

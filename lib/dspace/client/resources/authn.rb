@@ -2,7 +2,6 @@
 
 # DSpace
 module DSpace
-  # LoginResource
   class AuthnResource < Request
     def create
       login_request

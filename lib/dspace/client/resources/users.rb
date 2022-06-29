@@ -2,7 +2,6 @@
 
 # DSpace
 module DSpace
-  # UserResource
   class UserResource < Request
     ENDPOINT = "eperson/epersons"
 

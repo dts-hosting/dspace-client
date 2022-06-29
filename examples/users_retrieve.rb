@@ -12,4 +12,12 @@ client = DSpace::Client.new(config: config)
 client.login
 
 users = client.users.list.data
-puts client.users.retrieve(uuid: users.first.uuid)
+user  = client.users.retrieve(uuid: users.first.uuid)
+
+puts user.inspect
+
+# Show some interactions
+puts user.uuid
+puts user.canLogIn
+puts user.metadata["eperson.firstname"].first.value
+puts user.metadata["eperson.lastname"].first.value

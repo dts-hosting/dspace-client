@@ -11,6 +11,9 @@ config = DSpace::Configuration.new(settings: {
 client = DSpace::Client.new(config: config)
 client.login
 
-# client.users.all.each { |user| puts user }
-users = client.users.list.data
-puts client.users.retrieve(uuid: users.first.uuid)
+user = client.users.search(email: "user@institution.edu")
+if user.uuid
+  puts client.users.delete(uuid: user.uuid).inspect
+else
+  puts "User does not exist"
+end

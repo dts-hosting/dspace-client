@@ -1,0 +1,76 @@
+{
+  "_embedded": {
+    "epersons": [
+      {
+        "id": "028dcbb8-0da2-4122-a0ea-254be49ca107",
+        "uuid": "028dcbb8-0da2-4122-a0ea-254be49ca107",
+        "name": "user@institution.edu",
+        "handle": null,
+        "metadata": {
+          "eperson.firstname": [
+            {
+              "value": "John",
+              "language": null,
+              "authority": "",
+              "confidence": -1,
+              "place": 0
+            }
+          ],
+          "eperson.language": [
+            {
+              "value": "en",
+              "language": null,
+              "authority": "",
+              "confidence": -1,
+              "place": 0
+            }
+          ],
+          "eperson.lastname": [
+            {
+              "value": "Doe",
+              "language": null,
+              "authority": "",
+              "confidence": -1,
+              "place": 0
+            }
+          ]
+        },
+        "netid": null,
+        "lastActive": "2019-09-25T15:59:28.000+0000",
+        "canLogIn": true,
+        "email": "user@institution.edu",
+        "requireCertificate": false,
+        "selfRegistered": true,
+        "type": "eperson",
+        "_links": {
+          "self": {
+            "href": "https://dspace7.4science.it/dspace-spring-rest/api/eperson/epersons/028dcbb8-0da2-4122-a0ea-254be49ca107"
+          },
+          "groups": {
+            "href": "https://dspace7.4science.it/dspace-spring-rest/api/eperson/epersons/028dcbb8-0da2-4122-a0ea-254be49ca107/groups"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "first": {
+      "href": "https://demo.dspacedirect.net/server/api/eperson/epersons?page=0&size=20"
+    },
+    "self": {
+      "href": "https://demo.dspacedirect.net/server/api/eperson/epersons"
+    },
+    "last": {
+      "href": "https://demo.dspacedirect.net/server/api/eperson/epersons?page=00&size=20"
+    },
+    "search": {
+      "href": "https://demo.dspacedirect.net/server/api/eperson/epersons/search"
+    }
+  },
+  "page": {
+    "size": 20,
+    "totalElements": 1,
+    "totalPages": 1,
+    "number": 0
+  }
+}

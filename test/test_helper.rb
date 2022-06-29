@@ -14,7 +14,7 @@ module Minitest
 
     def stub_request(path, response:, method: :get, body: {})
       Faraday::Adapter::Test::Stubs.new do |stub|
-        arguments = [method, path]
+        arguments = [method, "server/api/#{path}"]
         arguments << body.to_json if %i[post put patch].include?(method)
         stub.send(*arguments) { |_env| response }
       end

@@ -27,10 +27,11 @@ client.login
 - `bin/setup` # install dependencies
 - `bin/console` # irb session
 
-Run tests:
+Run tests & lint:
 
 ```ruby
 bundle exec rake
+bundle exec rubocop
 ```
 
 ## Contributing

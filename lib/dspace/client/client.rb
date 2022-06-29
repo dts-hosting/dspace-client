@@ -15,7 +15,7 @@ module DSpace
 
     # Expose basic operations: (get, post, put, delete)
     def get(path, params = {}, headers = {})
-      DSpace::Request.new(client: self).get_request(path, params, headers)
+      DSpace::Request.new(client: self).get_request(path, params: params, headers: headers)
     end
 
     # Authentication is special
@@ -33,11 +33,11 @@ module DSpace
         conn.url_prefix   = @config.rest_url
         conn.ssl[:verify] = @config.ssl_verify
 
-        conn.adapter @config.adapter
+        conn.adapter @config.adapter, @config.stubs
         conn.use     :cookie_jar
 
-        conn.request  :json, content_type: "application/json"
-        conn.response :json, content_type: "application/json"
+        conn.request  :json
+        conn.response :json
       end
     end
   end

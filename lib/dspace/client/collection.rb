@@ -5,7 +5,7 @@ module DSpace
     attr_reader :data, :page, :size, :total_pages, :next_page, :prev_page, :last_page
 
     def self.from_response(response, key:, type:)
-      body = JSON.parse response.body
+      body = response.body
       new(
         data: body["_embedded"][key].map { |attrs| type.new(attrs) },
         page: body.dig("page", "number"),

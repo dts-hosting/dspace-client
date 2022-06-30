@@ -8,6 +8,17 @@ require "json"
 
 module Minitest
   class Test
+    def build_client(stub)
+      config = DSpace::Configuration.new(settings: {
+                                           adaptor: :test,
+                                           rest_url: "https://example.dspace.org/server/api",
+                                           username: "admin@dspacedirect.org",
+                                           password: "admin",
+                                           stubs: stub
+                                         })
+      DSpace::Client.new(config: config)
+    end
+
     def stub_response(fixture:, status: 200, headers: { "Content-Type" => "application/json" })
       [status, headers, File.read("test/fixtures/#{fixture}.json")]
     end

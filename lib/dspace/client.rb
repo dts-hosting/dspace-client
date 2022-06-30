@@ -20,4 +20,5 @@ require_relative "client/resources/users"
 module DSpace
   class ConfigurationError < StandardError; end
   class Error < StandardError; end
+  class InvalidParameterError < StandardError; end
 end

@@ -12,7 +12,7 @@ client = DSpace::Client.new(config: config)
 client.login
 
 body = { name: "user@institution.edu", email: "user@institution.edu" }
-user = client.users.search(email: body[:email])
+user = client.users.search_by_email(body[:email])
 if user.uuid
   puts "User already exists"
 else

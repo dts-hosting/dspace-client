@@ -2,16 +2,21 @@
 
 module DSpace
   class UserResource < Request
-    CONTRACT = "https://github.com/DSpace/RestContract/blob/main/epersons.md"
-    ENDPOINT = "eperson/epersons"
+    CONTRACT       = "https://github.com/DSpace/RestContract/blob/main/epersons.md"
+    ENDPOINT       = "eperson/epersons"
 
     def list(**params)
       response = get_request(ENDPOINT, params: params)
       DSpace::Collection.from_response(response, key: "epersons", type: DSpace::User)
     end
 
-    def search(**params)
-      DSpace::User.new get_request("#{ENDPOINT}/search/byEmail", params: params).body
+    def search_by_email(email)
+      DSpace::User.new search(email: email, method: "byEmail").body
+    end
+
+    def search_by_metadata(metadata)
+      response = search(query: metadata, method: "byMetadata")
+      DSpace::Collection.from_response(response, key: "epersons", type: DSpace::User)
     end
 
     def create(**attributes)
@@ -28,6 +33,13 @@ module DSpace
 
     def delete(uuid:)
       delete_request("#{ENDPOINT}/#{uuid}")
+    end
+
+    private
+
+    def search(**params)
+      search = params.delete(:method) { |_| "byEmail" }
+      get_request("#{ENDPOINT}/search/#{search}", params: params)
     end
   end
 end

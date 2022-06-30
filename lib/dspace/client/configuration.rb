@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# DSpace
 module DSpace
   # REST API Configuration
   class Configuration

@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
-# DSpace
 module DSpace
   class AuthnResource < Request
+    CONTRACT = "https://github.com/DSpace/RestContract/blob/main/authentication.md"
+    ENDPOINT = "authn"
+
     def create
       login_request
     end
@@ -15,6 +17,24 @@ module DSpace
     def delete
       # TODO: logout_request
       raise "Not implemented"
+    end
+
+    private
+
+    def login_request
+      # 1. Get a XSRF token
+      response = client.connection.post("#{ENDPOINT}/login") do |req|
+        handle_request_for_authentication(req)
+      end
+      refresh_token(response)
+
+      # 2. Repeat with XSRF token
+      response = client.connection.post("#{ENDPOINT}/login") do |req|
+        handle_request_for_authentication(req)
+      end
+      refresh_authorization(response)
+      refresh_token(response)
+      handle_response(response)
     end
   end
 end

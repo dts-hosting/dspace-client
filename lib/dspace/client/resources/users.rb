@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-# DSpace
 module DSpace
   class UserResource < Request
+    CONTRACT = "https://github.com/DSpace/RestContract/blob/main/epersons.md"
     ENDPOINT = "eperson/epersons"
 
     def list(**params)

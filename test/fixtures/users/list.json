@@ -55,16 +55,16 @@
   },
   "_links": {
     "first": {
-      "href": "https://demo.dspacedirect.net/server/api/eperson/epersons?page=0&size=20"
+      "href": "https://dspace7.4science.it/dspace-spring-rest/api/eperson/epersons?page=0&size=20"
     },
     "self": {
-      "href": "https://demo.dspacedirect.net/server/api/eperson/epersons"
+      "href": "https://dspace7.4science.it/dspace-spring-rest/api/eperson/epersons"
     },
     "last": {
-      "href": "https://demo.dspacedirect.net/server/api/eperson/epersons?page=00&size=20"
+      "href": "https://dspace7.4science.it/dspace-spring-rest/api/eperson/epersons?page=00&size=20"
     },
     "search": {
-      "href": "https://demo.dspacedirect.net/server/api/eperson/epersons/search"
+      "href": "https://dspace7.4science.it/dspace-spring-rest/api/eperson/epersons/search"
     }
   },
   "page": {

@@ -22,6 +22,12 @@ client = DSpace::Client.new(config: config)
 client.login
 ```
 
+See also the `examples` folder. To run the examples you'll need to define some ENV variables:
+
+- DSPACE_CLIENT_REST_URL : https://example.dspace.org/server/api
+- DSPACE_CLIENT_USERNAME : admin
+- DSPACE_CLIENT_PASSWORD : admin
+
 ## Development
 
 - `bin/setup` # install dependencies

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# DSpace
 module DSpace
   class Request
     attr_reader :client
@@ -94,22 +93,6 @@ module DSpace
       response
     end
     # rubocop:enable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength
-
-    def login_request
-      # 1. Get a XSRF token
-      response = client.connection.post("authn/login") do |req|
-        handle_request_for_authentication(req)
-      end
-      refresh_token(response)
-
-      # 2. Repeat with XSRF token
-      response = client.connection.post("authn/login") do |req|
-        handle_request_for_authentication(req)
-      end
-      refresh_authorization(response)
-      refresh_token(response)
-      handle_response(response)
-    end
 
     def refresh_authorization(response)
       client.authorization = response.headers["Authorization"] if response.headers.key?("Authorization")

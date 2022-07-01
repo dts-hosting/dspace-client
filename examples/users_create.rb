@@ -16,6 +16,6 @@ user = client.users.search_by_email(body[:email])
 if user.uuid
   puts "User already exists"
 else
-  response = client.users.create(**body)
-  puts response.inspect
+  user = client.users.create(**body)
+  puts user.inspect
 end

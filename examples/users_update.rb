@@ -13,5 +13,5 @@ client.login
 
 user = client.users.list.data.first
 body = { op: "replace", path: "/canLogIn", value: user.canLogIn ? "false" : "true" }
-response = client.users.update(uuid: user.uuid, **body)
-puts response
+user = client.users.update(uuid: user.uuid, **body)
+puts user.inspect

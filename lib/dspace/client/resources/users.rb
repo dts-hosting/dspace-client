@@ -7,7 +7,7 @@ module DSpace
 
     def list(**params)
       response = get_request(ENDPOINT, params: params)
-      DSpace::Collection.from_response(response, key: "epersons", type: DSpace::User)
+      DSpace::List.from_response(response, key: "epersons", type: DSpace::User)
     end
 
     def search_by_email(email)
@@ -16,7 +16,7 @@ module DSpace
 
     def search_by_metadata(metadata)
       response = search(query: metadata, method: "byMetadata")
-      DSpace::Collection.from_response(response, key: "epersons", type: DSpace::User)
+      DSpace::List.from_response(response, key: "epersons", type: DSpace::User)
     end
 
     def create(**attributes)

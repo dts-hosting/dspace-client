@@ -7,12 +7,12 @@ module DSpace
 
     def list(**params)
       response = get_request(ENDPOINT, params: params)
-      DSpace::Collection.from_response(response, key: "communities", type: DSpace::Community)
+      DSpace::List.from_response(response, key: "communities", type: DSpace::Community)
     end
 
     def search_by_metadata(metadata)
       response = search(query: metadata, method: "findAdminAuthorized")
-      DSpace::Collection.from_response(response, key: "communities", type: DSpace::Community)
+      DSpace::List.from_response(response, key: "communities", type: DSpace::Community)
     end
 
     def search_top

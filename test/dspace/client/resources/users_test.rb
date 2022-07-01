@@ -8,7 +8,7 @@ class UsersResourceTest < Minitest::Test
     client = build_client(stub)
     users  = client.users.list
 
-    assert_equal DSpace::Collection, users.class
+    assert_equal DSpace::List, users.class
     assert_equal DSpace::User, users.data.first.class
     assert_equal 1, users.total_pages
   end

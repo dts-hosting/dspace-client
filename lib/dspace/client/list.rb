@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module DSpace
-  class Collection
+  class List
     attr_reader :data, :page, :size, :total_pages, :next_page, :prev_page, :last_page
 
     def self.from_response(response, key:, type:)

@@ -8,7 +8,7 @@ class CommunitiesResourceTest < Minitest::Test
     client      = build_client(stub)
     communities = client.communities.list
 
-    assert_equal DSpace::Collection, communities.class
+    assert_equal DSpace::List, communities.class
     assert_equal DSpace::Community, communities.data.first.class
     assert_equal 4, communities.total_pages
   end

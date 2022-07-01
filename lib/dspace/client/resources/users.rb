@@ -2,8 +2,8 @@
 
 module DSpace
   class UserResource < Request
-    CONTRACT       = "https://github.com/DSpace/RestContract/blob/main/epersons.md"
-    ENDPOINT       = "eperson/epersons"
+    CONTRACT = "https://github.com/DSpace/RestContract/blob/main/epersons.md"
+    ENDPOINT = "eperson/epersons"
 
     def list(**params)
       response = get_request(ENDPOINT, params: params)

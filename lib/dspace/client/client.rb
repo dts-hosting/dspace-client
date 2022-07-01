@@ -23,6 +23,10 @@ module DSpace
     end
 
     # Resources
+    def communities
+      DSpace::CommunityResource.new(client: self)
+    end
+
     def users
       DSpace::UserResource.new(client: self)
     end

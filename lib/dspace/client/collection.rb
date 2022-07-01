@@ -6,8 +6,9 @@ module DSpace
 
     def self.from_response(response, key:, type:)
       body = response.body
+      data = body.dig("_embedded", key) || []
       new(
-        data: body["_embedded"][key].map { |attrs| type.new(attrs) },
+        data: data.map { |attrs| type.new(attrs) },
         page: body.dig("page", "number"),
         size: body.dig("page", "size"),
         total_elements: body.dig("page", "totalElements"),

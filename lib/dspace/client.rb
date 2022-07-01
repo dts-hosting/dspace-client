@@ -11,9 +11,11 @@ require_relative "client/object"
 require_relative "client/request"
 require_relative "client/version"
 
+require_relative "client/objects/community"
 require_relative "client/objects/user"
 
 require_relative "client/resources/authn"
+require_relative "client/resources/communities"
 require_relative "client/resources/users"
 
 # DSpace

@@ -23,6 +23,10 @@ module DSpace
     end
 
     # Resources
+    def collections
+      DSpace::CollectionResource.new(client: self)
+    end
+
     def communities
       DSpace::CommunityResource.new(client: self)
     end

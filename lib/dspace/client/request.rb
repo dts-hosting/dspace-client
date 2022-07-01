@@ -2,10 +2,11 @@
 
 module DSpace
   class Request
-    attr_reader :client
+    attr_reader :client, :endpoint
 
-    def initialize(client:)
-      @client = client
+    def initialize(client:, endpoint: nil)
+      @client   = client
+      @endpoint = endpoint
     end
 
     def all
@@ -102,6 +103,12 @@ module DSpace
     def refresh_token(response)
       client.token = response.headers["DSPACE-XSRF-TOKEN"] if response.headers.key?("DSPACE-XSRF-TOKEN")
       response
+    end
+
+    # If the endpoint for the request has been initialized then treat the path as a fallback.
+    # This is used by some resource methods to apply the endpoint for subrecords supplied by objects
+    def resolve_endpoint(path)
+      endpoint || path
     end
   end
 end

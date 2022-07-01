@@ -16,6 +16,7 @@ require_relative "client/objects/community"
 require_relative "client/objects/user"
 
 require_relative "client/resources/authn"
+require_relative "client/resources/collections"
 require_relative "client/resources/communities"
 require_relative "client/resources/users"
 

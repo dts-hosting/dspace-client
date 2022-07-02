@@ -1,0 +1,1522 @@
+{
+  "_embedded" : {
+    "collections" : [ {
+      "id" : "c6a3cca5-365b-4e6d-9345-cc46501dab39",
+      "uuid" : "c6a3cca5-365b-4e6d-9345-cc46501dab39",
+      "name" : "3-step Workflow collection",
+      "handle" : "10673/499",
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "Start a new <a href=\"/submit\">submission</a>.",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/499",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "3-step Workflow collection",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/c6a3cca5-365b-4e6d-9345-cc46501dab39/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "b7bf809e-b8ea-41bf-b16a-38d78785f557",
+      "uuid" : "b7bf809e-b8ea-41bf-b16a-38d78785f557",
+      "name" : "Journal Issues",
+      "handle" : "10673/30",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/30",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Journal Issues",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dspace.entity.type" : [ {
+          "value" : "JournalIssue",
+          "language" : "",
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7bf809e-b8ea-41bf-b16a-38d78785f557/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "8ad84c46-bdf1-4558-9b90-5c43ff396980",
+      "uuid" : "8ad84c46-bdf1-4558-9b90-5c43ff396980",
+      "name" : "Journals",
+      "handle" : "10673/28",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/28",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Journals",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dspace.entity.type" : [ {
+          "value" : "Journal",
+          "language" : "",
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8ad84c46-bdf1-4558-9b90-5c43ff396980/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "8814a173-73ce-4ca3-92c2-17c9d0f2268c",
+      "uuid" : "8814a173-73ce-4ca3-92c2-17c9d0f2268c",
+      "name" : "Journal Volumes",
+      "handle" : "10673/29",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/29",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Journal Volumes",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dspace.entity.type" : [ {
+          "value" : "JournalVolume",
+          "language" : "",
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8814a173-73ce-4ca3-92c2-17c9d0f2268c/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "3e96a9c1-a2d8-4fa7-b049-d47307f0b67c",
+      "uuid" : "3e96a9c1-a2d8-4fa7-b049-d47307f0b67c",
+      "name" : "Projects",
+      "handle" : "10673/7",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/7",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Projects",
+          "language" : null,
+          "authority" : "",
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dspace.entity.type" : [ {
+          "value" : "Project",
+          "language" : "",
+          "authority" : "",
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/3e96a9c1-a2d8-4fa7-b049-d47307f0b67c/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "eb3224f3-6383-42e1-abe0-a73df842608a",
+      "uuid" : "eb3224f3-6383-42e1-abe0-a73df842608a",
+      "name" : "Projects 2",
+      "handle" : "10673/280",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/280",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Projects 2",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dspace.entity.type" : [ {
+          "value" : "Project",
+          "language" : "",
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/eb3224f3-6383-42e1-abe0-a73df842608a/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "dd1240ae-d7dd-405c-bdc3-d6c960609433",
+      "uuid" : "dd1240ae-d7dd-405c-bdc3-d6c960609433",
+      "name" : "Publications 2",
+      "handle" : "10673/281",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/281",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Publications 2",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dspace.entity.type" : [ {
+          "value" : "Publication",
+          "language" : "",
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/dd1240ae-d7dd-405c-bdc3-d6c960609433/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "a40a32bf-d3ec-42d8-80b4-e669bc2f84ad",
+      "uuid" : "a40a32bf-d3ec-42d8-80b4-e669bc2f84ad",
+      "name" : "DEMO Collection",
+      "handle" : "10673/1340",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/1340",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "DEMO Collection",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a40a32bf-d3ec-42d8-80b4-e669bc2f84ad/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "42216b33-ad53-4908-be0d-10bbc69ce2c8",
+      "uuid" : "42216b33-ad53-4908-be0d-10bbc69ce2c8",
+      "name" : "rebit collection",
+      "handle" : "10673/1345",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/1345",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "rebit collection",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/42216b33-ad53-4908-be0d-10bbc69ce2c8/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "f53b245e-c527-44ac-adb3-0629dd9e70ea",
+      "uuid" : "f53b245e-c527-44ac-adb3-0629dd9e70ea",
+      "name" : "rebitcollection",
+      "handle" : "10673/1347",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/1347",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "rebitcollection",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/f53b245e-c527-44ac-adb3-0629dd9e70ea/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "6177e5d2-445c-4d4c-90ee-85d9acc2358b",
+      "uuid" : "6177e5d2-445c-4d4c-90ee-85d9acc2358b",
+      "name" : "Servidores",
+      "handle" : "10673/1355",
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "Colección de admnistración de servidores",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.description.abstract" : [ {
+          "value" : "Se concentra toda la administración de los servidores de informática",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/1355",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Servidores",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dspace.entity.type" : [ {
+          "value" : "Project",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6177e5d2-445c-4d4c-90ee-85d9acc2358b/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "a4c27b4f-fa8c-4725-be8b-418b7e5cd08f",
+      "uuid" : "a4c27b4f-fa8c-4725-be8b-418b7e5cd08f",
+      "name" : "Thomas-Kern Exercise",
+      "handle" : "10673/1359",
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "This is the dspace exercise for Jesse  (JT) Thomas-Kern",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/1359",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.rights" : [ {
+          "value" : "No known copyright",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Thomas-Kern Exercise",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/a4c27b4f-fa8c-4725-be8b-418b7e5cd08f/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "84c21fcf-9bdf-42f4-9843-191d54ec4323",
+      "uuid" : "84c21fcf-9bdf-42f4-9843-191d54ec4323",
+      "name" : "Gryffindor",
+      "handle" : "10673/1362",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/1362",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Gryffindor",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dspace.entity.type" : [ {
+          "value" : "Publication",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/84c21fcf-9bdf-42f4-9843-191d54ec4323/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "ea0cbd26-f929-413e-840e-2e2ef876dee7",
+      "uuid" : "ea0cbd26-f929-413e-840e-2e2ef876dee7",
+      "name" : "Past Year Papers",
+      "handle" : "10673/1370",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/1370",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Past Year Papers",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dspace.entity.type" : [ {
+          "value" : "Publication",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/ea0cbd26-f929-413e-840e-2e2ef876dee7/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "b7261fe0-8256-44c8-8634-c021dc8a83fe",
+      "uuid" : "b7261fe0-8256-44c8-8634-c021dc8a83fe",
+      "name" : "Salud",
+      "handle" : "10673/1375",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/1375",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Salud",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/b7261fe0-8256-44c8-8634-c021dc8a83fe/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "9854ca94-5a02-409b-bd3c-5c71b46aa971",
+      "uuid" : "9854ca94-5a02-409b-bd3c-5c71b46aa971",
+      "name" : "tester",
+      "handle" : "10673/1350",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/1350",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "tester",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/9854ca94-5a02-409b-bd3c-5c71b46aa971/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "fa53d299-5e0b-4991-8b48-318f71758ac6",
+      "uuid" : "fa53d299-5e0b-4991-8b48-318f71758ac6",
+      "name" : "coll",
+      "handle" : "10673/1381",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/1381",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "coll",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/fa53d299-5e0b-4991-8b48-318f71758ac6/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "8a5f46f0-f343-49cf-9936-d1e1bb2a7aec",
+      "uuid" : "8a5f46f0-f343-49cf-9936-d1e1bb2a7aec",
+      "name" : "Collection111",
+      "handle" : "10673/1384",
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "fnezfze dzeef dkddz dkvrhfr vkfrher zdéefunrgoz zeoflghr dzadoijt frkfzlf'u fefuieer firthzk efrjg\"udzjj efirfdjeflhhgie",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.description.abstract" : [ {
+          "value" : "fnezfze dzeef dkddz dkvrhfr vkfrher zdéefunrgoz zeoflghr dzadoijt frkfzlf'u fefuieer firthzk efrjg\"udzjj efirfdjeflhhgie",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.description.tableofcontents" : [ {
+          "value" : "fnezfze dzeef dkddz dkvrhfr vkfrher zdéefunrgoz zeoflghr dzadoijt frkfzlf'u fefuieer firthzk efrjg\"udzjj efirfdjeflhhgie",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/1384",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.rights" : [ {
+          "value" : "fnezfze dzeef dkddz dkvrhfr vkfrher zdéefunrgoz zeoflghr dzadoijt frkfzlf'u fefuieer firthzk efrjg\"udzjj efirfdjeflhhgie",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.rights.license" : [ {
+          "value" : "fnezfze dzeef dkddz dkvrhfr vkfrher zdéefunrgoz zeoflghr dzadoijt frkfzlf'u fefuieer firthzk efrjg\"udzjj efirfdjeflhhgie",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Collection111",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dspace.entity.type" : [ {
+          "value" : "Publication",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/8a5f46f0-f343-49cf-9936-d1e1bb2a7aec/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "51715dd3-5590-49f2-b227-6a663c849921",
+      "uuid" : "51715dd3-5590-49f2-b227-6a663c849921",
+      "name" : "1-step Workflow collection",
+      "handle" : "10673/500",
+      "metadata" : {
+        "dc.description" : [ {
+          "value" : "Start a new <a href=\"/submit\">submission</a>.",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/500",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "1-step Workflow collection",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dspace.entity.type" : [ {
+          "value" : "Publication",
+          "language" : "",
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/51715dd3-5590-49f2-b227-6a663c849921/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    }, {
+      "id" : "6d01f42e-6d60-49eb-af61-5ee811ab16e5",
+      "uuid" : "6d01f42e-6d60-49eb-af61-5ee811ab16e5",
+      "name" : "Colección Inetum",
+      "handle" : "10673/1398",
+      "metadata" : {
+        "dc.identifier.uri" : [ {
+          "value" : "https://demo7.dspace.org/handle/10673/1398",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ],
+        "dc.title" : [ {
+          "value" : "Colección Inetum",
+          "language" : null,
+          "authority" : null,
+          "confidence" : -1,
+          "place" : 0
+        } ]
+      },
+      "type" : "collection",
+      "_links" : {
+        "harvester" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5/harvester"
+        },
+        "itemtemplate" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5/itemtemplate"
+        },
+        "license" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5/license"
+        },
+        "logo" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5/logo"
+        },
+        "mappedItems" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5/mappedItems"
+        },
+        "parentCommunity" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5/parentCommunity"
+        },
+        "adminGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5/adminGroup"
+        },
+        "submittersGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5/submittersGroup"
+        },
+        "itemReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5/itemReadGroup"
+        },
+        "bitstreamReadGroup" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5/bitstreamReadGroup"
+        },
+        "self" : {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5"
+        },
+        "workflowGroups" : [ {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5/workflowGroups/editor",
+          "name" : "editor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5/workflowGroups/finaleditor",
+          "name" : "finaleditor"
+        }, {
+          "href" : "https://api7.dspace.org/server/api/core/collections/6d01f42e-6d60-49eb-af61-5ee811ab16e5/workflowGroups/reviewer",
+          "name" : "reviewer"
+        } ]
+      }
+    } ]
+  },
+  "_links" : {
+    "first" : {
+      "href" : "https://api7.dspace.org/server/api/core/collections?page=0&size=20"
+    },
+    "self" : {
+      "href" : "https://api7.dspace.org/server/api/core/collections"
+    },
+    "next" : {
+      "href" : "https://api7.dspace.org/server/api/core/collections?page=1&size=20"
+    },
+    "last" : {
+      "href" : "https://api7.dspace.org/server/api/core/collections?page=4&size=20"
+    },
+    "search" : {
+      "href" : "https://api7.dspace.org/server/api/core/collections/search"
+    }
+  },
+  "page" : {
+    "size" : 20,
+    "totalElements" : 83,
+    "totalPages" : 5,
+    "number" : 0
+  }
+}

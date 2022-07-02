@@ -36,13 +36,13 @@ class CommunitiesResourceTest < Minitest::Test
 
   def test_update
     uuid = "7669c72a-3f2a-451f-a3b9-9210e7a4c02f"
-    body = { op: "replace", path: "/canLogin", value: "false" }
+    body = { op: "replace", path: "/metadata/dc.description/0", value: { value: "First description updated" } }
     stub = stub_request("core/communities/#{uuid}", method: :patch, body: [body],
                                                     response: stub_response(fixture: "communities/update"))
     client = build_client(stub)
 
     assert_equal "First description updated",
-                  client.communities.update(uuid: uuid, **body).metadata["dc.description"].first.value
+                 client.communities.update(uuid: uuid, **body).metadata["dc.description"].first.value
   end
 
   def test_delete

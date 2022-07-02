@@ -54,4 +54,24 @@ class UsersResourceTest < Minitest::Test
       assert client.users.delete(uuid: uuid)
     end
   end
+
+  def test_search_by_email
+    client = build_client
+    VCR.use_cassette("users_search_by_email") do
+      client.login
+      user = client.users.search_by_email(client.config.username)
+      assert_equal DSpace::User, user.class
+      assert_equal client.config.username, user.email
+    end
+  end
+
+  def test_search_by_metadata
+    client = build_client
+    VCR.use_cassette("users_search_by_metadata") do
+      client.login
+      users = client.users.search_by_metadata("lyrasis")
+      assert_equal DSpace::List, users.class
+      assert_equal 1, users.total_pages
+    end
+  end
 end

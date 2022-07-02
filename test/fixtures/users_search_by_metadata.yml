@@ -1,0 +1,189 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://demo.dspacedirect.net/server/api/authn/login
+    body:
+      encoding: US-ASCII
+      string: "<AUTHENTICATION>"
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-XSRF-Token: []
+  response:
+    status:
+      code: 403
+      message: '403'
+    headers:
+      date:
+      - Sat, 02 Jul 2022 21:57:45 GMT
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      set-cookie:
+      - DSPACE-XSRF-COOKIE=ba58152e-79e5-48fa-aa22-5d0e8216d07d; Path=/server; Secure;
+        HttpOnly; SameSite=None
+      dspace-xsrf-token:
+      - ba58152e-79e5-48fa-aa22-5d0e8216d07d
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"timestamp":"2022-07-02T21:57:45.069+00:00","status":403,"error":"Forbidden","message":"Access
+        is denied. Invalid CSRF token.","path":"/server/api/authn/login"}'
+  recorded_at: Sat, 02 Jul 2022 21:57:45 GMT
+- request:
+    method: post
+    uri: https://demo.dspacedirect.net/server/api/authn/login
+    body:
+      encoding: US-ASCII
+      string: "<AUTHENTICATION>"
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-XSRF-Token:
+      - ba58152e-79e5-48fa-aa22-5d0e8216d07d
+      Cookie:
+      - DSPACE-XSRF-COOKIE=ba58152e-79e5-48fa-aa22-5d0e8216d07d
+  response:
+    status:
+      code: 200
+      message: '200'
+    headers:
+      date:
+      - Sat, 02 Jul 2022 21:57:45 GMT
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      set-cookie:
+      - DSPACE-XSRF-COOKIE=; Path=/server; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00
+        GMT; Secure; HttpOnly; SameSite=None, DSPACE-XSRF-COOKIE=c9b61a2b-83cc-4934-a545-4b48dc06ae91;
+        Path=/server; Secure; HttpOnly; SameSite=None
+      dspace-xsrf-token:
+      - c9b61a2b-83cc-4934-a545-4b48dc06ae91
+      authorization:
+      - "<TOKEN>"
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 02 Jul 2022 21:57:45 GMT
+- request:
+    method: get
+    uri: https://demo.dspacedirect.net/server/api/eperson/epersons/search/byMetadata?query=lyrasis
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-XSRF-Token:
+      - c9b61a2b-83cc-4934-a545-4b48dc06ae91
+      Authorization:
+      - "<TOKEN>"
+      Cookie:
+      - DSPACE-XSRF-COOKIE=c9b61a2b-83cc-4934-a545-4b48dc06ae91
+  response:
+    status:
+      code: 200
+      message: '200'
+    headers:
+      date:
+      - Sat, 02 Jul 2022 21:57:45 GMT
+      content-type:
+      - application/hal+json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      content-language:
+      - en
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"_embedded":{"epersons":[{"id":"39a656de-c22a-49a4-b514-1d9f00c1d0b7","uuid":"39a656de-c22a-49a4-b514-1d9f00c1d0b7","name":"bbranan@lyrasis.org","handle":null,"metadata":{"dspace.agreements.cookies":[{"value":"{\"authentication\":true,\"preferences\":true,\"acknowledgement\":true,\"google-analytics\":true}","language":null,"authority":null,"confidence":-1,"place":0}],"dspace.agreements.end-user":[{"value":"true","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.firstname":[{"value":"Bill","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.language":[{"value":"","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"Branan","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.phone":[{"value":"","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":"2022-01-12T15:57:47.305+00:00","canLogIn":true,"email":"bbranan@lyrasis.org","requireCertificate":false,"selfRegistered":false,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/39a656de-c22a-49a4-b514-1d9f00c1d0b7/groups"},"self":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/39a656de-c22a-49a4-b514-1d9f00c1d0b7"}}},{"id":"b8ec493f-c95b-4e2b-be93-99445a7b95a4","uuid":"b8ec493f-c95b-4e2b-be93-99445a7b95a4","name":"blake.carver@lyrasis.org","handle":null,"metadata":{"dspace.agreements.end-user":[{"value":"true","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.firstname":[{"value":"Blake","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.language":[{"value":"en","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"Carver","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.phone":[{"value":"7166390806","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":null,"canLogIn":true,"email":"blake.carver@lyrasis.org","requireCertificate":false,"selfRegistered":false,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/b8ec493f-c95b-4e2b-be93-99445a7b95a4/groups"},"self":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/b8ec493f-c95b-4e2b-be93-99445a7b95a4"}}},{"id":"93ca740d-45d1-4517-8d3e-cc6cedc29249","uuid":"93ca740d-45d1-4517-8d3e-cc6cedc29249","name":"carissa.egan@lyrasis.org","handle":null,"metadata":{"eperson.firstname":[{"value":"Carissa","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.language":[{"value":"en","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"Egan","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.phone":[{"value":"","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":"2021-09-03T12:47:06.570+00:00","canLogIn":true,"email":"carissa.egan@lyrasis.org","requireCertificate":false,"selfRegistered":true,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/93ca740d-45d1-4517-8d3e-cc6cedc29249/groups"},"self":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/93ca740d-45d1-4517-8d3e-cc6cedc29249"}}},{"id":"91fdda24-5ba1-4f33-a80a-a023d949b2bb","uuid":"91fdda24-5ba1-4f33-a80a-a023d949b2bb","name":"james.english@lyrasis.org","handle":null,"metadata":{"eperson.firstname":[{"value":"James","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.language":[{"value":"en","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"English","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.phone":[{"value":"7182887394","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":"2021-09-02T12:10:41.090+00:00","canLogIn":true,"email":"james.english@lyrasis.org","requireCertificate":false,"selfRegistered":true,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/91fdda24-5ba1-4f33-a80a-a023d949b2bb/groups"},"self":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/91fdda24-5ba1-4f33-a80a-a023d949b2bb"}}},{"id":"0bfe5e07-c7d8-484f-91b6-80f2a775f09c","uuid":"0bfe5e07-c7d8-484f-91b6-80f2a775f09c","name":"mark.cooper@lyrasis.org","handle":null,"metadata":{"eperson.firstname":[{"value":"Mark","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"Cooper","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":null,"canLogIn":true,"email":"mark.cooper@lyrasis.org","requireCertificate":false,"selfRegistered":false,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/0bfe5e07-c7d8-484f-91b6-80f2a775f09c/groups"},"self":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/0bfe5e07-c7d8-484f-91b6-80f2a775f09c"}}},{"id":"f2666557-ffde-4f51-8280-7a78345ffcd2","uuid":"f2666557-ffde-4f51-8280-7a78345ffcd2","name":"melissa.anez@lyrasis.org","handle":null,"metadata":{"dspace.agreements.cookies":[{"value":"{\"authentication\":true,\"preferences\":true,\"acknowledgement\":true,\"google-analytics\":true}","language":null,"authority":null,"confidence":-1,"place":0}],"dspace.agreements.end-user":[{"value":"true","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.firstname":[{"value":"Melissa","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.language":[{"value":"en","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"Anez","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.phone":[{"value":"5063044433","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":"2022-06-29T16:32:06.987+00:00","canLogIn":true,"email":"melissa.anez@lyrasis.org","requireCertificate":false,"selfRegistered":true,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/f2666557-ffde-4f51-8280-7a78345ffcd2/groups"},"self":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/f2666557-ffde-4f51-8280-7a78345ffcd2"}}},{"id":"c5f6e919-fdde-4a71-a5d5-d91f2ce40377","uuid":"c5f6e919-fdde-4a71-a5d5-d91f2ce40377","name":"jonathan.robinson@lyrasis.org","handle":null,"metadata":{"dspace.agreements.end-user":[{"value":"true","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.firstname":[{"value":"test","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.language":[{"value":"en","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"test","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.phone":[{"value":"8009998558","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":null,"canLogIn":true,"email":"jonathan.robinson@lyrasis.org","requireCertificate":false,"selfRegistered":false,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/c5f6e919-fdde-4a71-a5d5-d91f2ce40377/groups"},"self":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/c5f6e919-fdde-4a71-a5d5-d91f2ce40377"}}},{"id":"80fbd15e-b7e2-4e40-ae03-2af988bbb362","uuid":"80fbd15e-b7e2-4e40-ae03-2af988bbb362","name":"bill.branan@lyrasis.org","handle":null,"metadata":{"dspace.agreements.cookies":[{"value":"{\"authentication\":true,\"preferences\":true,\"acknowledgement\":true,\"google-analytics\":true}","language":null,"authority":null,"confidence":-1,"place":0}],"dspace.agreements.end-user":[{"value":"true","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.firstname":[{"value":"Test","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.language":[{"value":"en","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"Admin","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.phone":[{"value":"","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":"2022-01-24T20:50:42.743+00:00","canLogIn":true,"email":"bill.branan@lyrasis.org","requireCertificate":false,"selfRegistered":true,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/80fbd15e-b7e2-4e40-ae03-2af988bbb362/groups"},"self":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/80fbd15e-b7e2-4e40-ae03-2af988bbb362"}}}]},"_links":{"self":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/search/byMetadata?query=lyrasis"}},"page":{"size":20,"totalElements":8,"totalPages":1,"number":0}}'
+  recorded_at: Sat, 02 Jul 2022 21:57:45 GMT
+recorded_with: VCR 6.1.0

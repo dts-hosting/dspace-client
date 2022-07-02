@@ -26,20 +26,17 @@ module DSpace
       delete_request("#{ENDPOINT}/#{uuid}")
     end
 
+    def search(method:, **attributes)
+      handle_search(path: ENDPOINT, resource: DSpace::User, key: "epersons", method: method, **attributes)
+    end
+
     def search_by_email(email)
-      DSpace::User.new search(email: email, method: "byEmail").body
+      handle_search(path: ENDPOINT, resource: DSpace::User, key: "epersons", method: "byEmail", list: false,
+                    email: email)
     end
 
     def search_by_metadata(metadata)
-      response = search(query: metadata, method: "byMetadata")
-      DSpace::List.from_response(response, key: "epersons", type: DSpace::User)
-    end
-
-    private
-
-    def search(**params)
-      search = params.delete(:method) { |_| raise DSpace::InvalidSearchError, "Search method required." }
-      get_request("#{ENDPOINT}/search/#{search}", params: params)
+      handle_search(path: ENDPOINT, resource: DSpace::User, key: "epersons", method: "byMetadata", query: metadata)
     end
   end
 end

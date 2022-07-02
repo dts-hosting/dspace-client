@@ -26,31 +26,27 @@ module DSpace
       delete_request("#{ENDPOINT}/#{uuid}")
     end
 
+    def search(method:, **attributes)
+      handle_search(path: ENDPOINT, resource: DSpace::Collection, key: "collections", method: method, **attributes)
+    end
+
     def search_admin_authorized
-      response = search(method: "findAdminAuthorized")
-      DSpace::List.from_response(response, key: "collections", type: DSpace::Collection)
+      handle_search(path: ENDPOINT, resource: DSpace::Collection, key: "collections", method: "findAdminAuthorized")
     end
 
     def search_submit_authorized(metadata)
-      response = search(query: metadata, method: "findSubmitAuthorized")
-      DSpace::List.from_response(response, key: "collections", type: DSpace::Collection)
+      handle_search(path: ENDPOINT, resource: DSpace::Collection, key: "collections", method: "findSubmitAuthorized",
+                    query: metadata)
     end
 
     def search_submit_authorized_by_community(uuid)
-      response = search(uuid: uuid, method: "findSubmitAuthorizedByCommunity")
-      DSpace::List.from_response(response, key: "collections", type: DSpace::Collection)
+      handle_search(path: ENDPOINT, resource: DSpace::Collection, key: "collections",
+                    method: "findSubmitAuthorizedByCommunity", uuid: uuid)
     end
 
     def search_submit_authorized_by_entity_type(entity_type)
-      response = search(entityType: entity_type, method: "findSubmitAuthorizedByEntityType")
-      DSpace::List.from_response(response, key: "collections", type: DSpace::Collection)
-    end
-
-    private
-
-    def search(**params)
-      search = params.delete(:method) { |_| raise DSpace::InvalidSearchError, "Search method required." }
-      get_request("#{ENDPOINT}/search/#{search}", params: params)
+      handle_search(path: ENDPOINT, resource: DSpace::Collection, key: "collections",
+                    method: "findSubmitAuthorizedByEntityType", entityType: entity_type)
     end
   end
 end

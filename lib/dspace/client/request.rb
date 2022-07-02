@@ -95,6 +95,15 @@ module DSpace
     end
     # rubocop:enable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength
 
+    def handle_search(path:, resource:, key:, method:, list: true, **params)
+      response = get_request("#{path}/search/#{method}", params: params)
+      if list
+        DSpace::List.from_response(response, key: key, type: resource)
+      else
+        resource.new get_request("#{path}/search/#{method}", params: params).body
+      end
+    end
+
     def refresh_authorization(response)
       client.authorization = response.headers["Authorization"] if response.headers.key?("Authorization")
       response

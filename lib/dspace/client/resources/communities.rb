@@ -26,20 +26,17 @@ module DSpace
       delete_request("#{ENDPOINT}/#{uuid}")
     end
 
+    def search(method:, **attributes)
+      handle_search(path: ENDPOINT, resource: DSpace::Community, key: "communities", method: method, **attributes)
+    end
+
     def search_by_metadata(metadata)
-      response = search(query: metadata, method: "findAdminAuthorized")
-      DSpace::List.from_response(response, key: "communities", type: DSpace::Community)
+      handle_search(path: ENDPOINT, resource: DSpace::Community, key: "communities", method: "findAdminAuthorized",
+                    query: metadata)
     end
 
     def search_top
-      DSpace::Community.new search(method: "top").body
-    end
-
-    private
-
-    def search(**params)
-      search = params.delete(:method) { |_| raise DSpace::InvalidSearchError, "Search method required." }
-      get_request("#{ENDPOINT}/search/#{search}", params: params)
+      handle_search(path: ENDPOINT, resource: DSpace::Community, key: "communities", method: "top", list: false)
     end
   end
 end

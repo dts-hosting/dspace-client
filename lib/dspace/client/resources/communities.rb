@@ -10,15 +10,6 @@ module DSpace
       DSpace::List.from_response(response, key: "communities", type: DSpace::Community)
     end
 
-    def search_by_metadata(metadata)
-      response = search(query: metadata, method: "findAdminAuthorized")
-      DSpace::List.from_response(response, key: "communities", type: DSpace::Community)
-    end
-
-    def search_top
-      DSpace::Community.new search(method: "top").body
-    end
-
     def create(**attributes)
       DSpace::Community.new post_request(ENDPOINT, body: attributes).body
     end
@@ -33,6 +24,15 @@ module DSpace
 
     def delete(uuid:)
       delete_request("#{ENDPOINT}/#{uuid}")
+    end
+
+    def search_by_metadata(metadata)
+      response = search(query: metadata, method: "findAdminAuthorized")
+      DSpace::List.from_response(response, key: "communities", type: DSpace::Community)
+    end
+
+    def search_top
+      DSpace::Community.new search(method: "top").body
     end
 
     private

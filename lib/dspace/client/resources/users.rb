@@ -10,15 +10,6 @@ module DSpace
       DSpace::List.from_response(response, key: "epersons", type: DSpace::User)
     end
 
-    def search_by_email(email)
-      DSpace::User.new search(email: email, method: "byEmail").body
-    end
-
-    def search_by_metadata(metadata)
-      response = search(query: metadata, method: "byMetadata")
-      DSpace::List.from_response(response, key: "epersons", type: DSpace::User)
-    end
-
     def create(**attributes)
       DSpace::User.new post_request(ENDPOINT, body: attributes).body
     end
@@ -33,6 +24,15 @@ module DSpace
 
     def delete(uuid:)
       delete_request("#{ENDPOINT}/#{uuid}")
+    end
+
+    def search_by_email(email)
+      DSpace::User.new search(email: email, method: "byEmail").body
+    end
+
+    def search_by_metadata(metadata)
+      response = search(query: metadata, method: "byMetadata")
+      DSpace::List.from_response(response, key: "epersons", type: DSpace::User)
     end
 
     private

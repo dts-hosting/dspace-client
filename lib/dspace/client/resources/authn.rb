@@ -10,13 +10,15 @@ module DSpace
     end
 
     def retrieve
-      # TODO: status
-      raise "Not implemented"
+      get_request("#{ENDPOINT}/status").body
+    end
+
+    def update
+      login_request # just resend, if logged in will be refreshed
     end
 
     def delete
-      # TODO: logout_request
-      raise "Not implemented"
+      post_request("#{ENDPOINT}/logout", body: "").status
     end
 
     private

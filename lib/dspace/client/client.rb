@@ -22,6 +22,14 @@ module DSpace
       DSpace::AuthnResource.new(client: self).create
     end
 
+    def logout
+      DSpace::AuthnResource.new(client: self).delete
+    end
+
+    def status
+      DSpace::AuthnResource.new(client: self).retrieve
+    end
+
     # Resources
     def collections
       DSpace::CollectionResource.new(client: self)

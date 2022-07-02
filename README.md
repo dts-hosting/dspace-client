@@ -19,7 +19,9 @@ config = DSpace::Configuration.new(settings: {rest_url: '', username: '', passwo
 config = DSpace::Configuration.find # raises error if not found
 
 client = DSpace::Client.new(config: config)
+client.status # not authenticated
 client.login
+client.status # authenticated (assuming credentials are correct)
 ```
 
 See also the `examples` folder. To run the examples you'll need to define some ENV variables:
@@ -32,6 +34,13 @@ See also the `examples` folder. To run the examples you'll need to define some E
 
 - `bin/setup` # install dependencies
 - `bin/console` # irb session
+
+```ruby
+# example console interactions
+@client.login
+@client.status
+@client.collections.list.data
+```
 
 Run tests & lint:
 

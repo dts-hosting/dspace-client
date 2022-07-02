@@ -1,0 +1,185 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://demo.dspacedirect.net/server/api/authn/login
+    body:
+      encoding: US-ASCII
+      string: "<AUTHENTICATION>"
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-XSRF-Token: []
+  response:
+    status:
+      code: 403
+      message: '403'
+    headers:
+      date:
+      - Sat, 02 Jul 2022 21:44:49 GMT
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      set-cookie:
+      - DSPACE-XSRF-COOKIE=819c0e43-e065-4e91-9b2d-e7160546aec3; Path=/server; Secure;
+        HttpOnly; SameSite=None
+      dspace-xsrf-token:
+      - 819c0e43-e065-4e91-9b2d-e7160546aec3
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"timestamp":"2022-07-02T21:44:49.240+00:00","status":403,"error":"Forbidden","message":"Access
+        is denied. Invalid CSRF token.","path":"/server/api/authn/login"}'
+  recorded_at: Sat, 02 Jul 2022 21:44:49 GMT
+- request:
+    method: post
+    uri: https://demo.dspacedirect.net/server/api/authn/login
+    body:
+      encoding: US-ASCII
+      string: "<AUTHENTICATION>"
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-XSRF-Token:
+      - 819c0e43-e065-4e91-9b2d-e7160546aec3
+      Cookie:
+      - DSPACE-XSRF-COOKIE=819c0e43-e065-4e91-9b2d-e7160546aec3
+  response:
+    status:
+      code: 200
+      message: '200'
+    headers:
+      date:
+      - Sat, 02 Jul 2022 21:44:49 GMT
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      set-cookie:
+      - DSPACE-XSRF-COOKIE=; Path=/server; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00
+        GMT; Secure; HttpOnly; SameSite=None, DSPACE-XSRF-COOKIE=c67c923c-ee04-43a3-a5f0-a7b6f07dfd28;
+        Path=/server; Secure; HttpOnly; SameSite=None
+      dspace-xsrf-token:
+      - c67c923c-ee04-43a3-a5f0-a7b6f07dfd28
+      authorization:
+      - "<TOKEN>"
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 02 Jul 2022 21:44:49 GMT
+- request:
+    method: delete
+    uri: https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-XSRF-Token:
+      - c67c923c-ee04-43a3-a5f0-a7b6f07dfd28
+      Authorization:
+      - "<TOKEN>"
+      Cookie:
+      - DSPACE-XSRF-COOKIE=c67c923c-ee04-43a3-a5f0-a7b6f07dfd28
+  response:
+    status:
+      code: 204
+      message: '204'
+    headers:
+      date:
+      - Sat, 02 Jul 2022 21:44:50 GMT
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      content-language:
+      - en
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 02 Jul 2022 21:44:50 GMT
+recorded_with: VCR 6.1.0

@@ -1,0 +1,191 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://demo.dspacedirect.net/server/api/authn/login
+    body:
+      encoding: US-ASCII
+      string: "<AUTHENTICATION>"
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-XSRF-Token: []
+  response:
+    status:
+      code: 403
+      message: '403'
+    headers:
+      date:
+      - Sat, 02 Jul 2022 21:38:27 GMT
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      set-cookie:
+      - DSPACE-XSRF-COOKIE=b5c69063-ba6c-4ed9-9ffb-ce86093786cf; Path=/server; Secure;
+        HttpOnly; SameSite=None
+      dspace-xsrf-token:
+      - b5c69063-ba6c-4ed9-9ffb-ce86093786cf
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"timestamp":"2022-07-02T21:38:27.079+00:00","status":403,"error":"Forbidden","message":"Access
+        is denied. Invalid CSRF token.","path":"/server/api/authn/login"}'
+  recorded_at: Sat, 02 Jul 2022 21:38:27 GMT
+- request:
+    method: post
+    uri: https://demo.dspacedirect.net/server/api/authn/login
+    body:
+      encoding: US-ASCII
+      string: "<AUTHENTICATION>"
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-XSRF-Token:
+      - b5c69063-ba6c-4ed9-9ffb-ce86093786cf
+      Cookie:
+      - DSPACE-XSRF-COOKIE=b5c69063-ba6c-4ed9-9ffb-ce86093786cf
+  response:
+    status:
+      code: 200
+      message: '200'
+    headers:
+      date:
+      - Sat, 02 Jul 2022 21:38:27 GMT
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      set-cookie:
+      - DSPACE-XSRF-COOKIE=; Path=/server; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00
+        GMT; Secure; HttpOnly; SameSite=None, DSPACE-XSRF-COOKIE=9c8afc31-45eb-4c70-bf9e-7945e7dd2eef;
+        Path=/server; Secure; HttpOnly; SameSite=None
+      dspace-xsrf-token:
+      - 9c8afc31-45eb-4c70-bf9e-7945e7dd2eef
+      authorization:
+      - "<TOKEN>"
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sat, 02 Jul 2022 21:38:27 GMT
+- request:
+    method: post
+    uri: https://demo.dspacedirect.net/server/api/core/collections?parent=05891e91-ea50-4d41-bb60-ee8803057ae4
+    body:
+      encoding: UTF-8
+      string: '{"name":"DTS.COLLECTION.001","metadata":{"dc.title":[{"value":"DTS.COLLECTION.001","language":null,"authority":null,"confidence":-1}]}}'
+    headers:
+      Authorization:
+      - "<TOKEN>"
+      X-XSRF-Token:
+      - 9c8afc31-45eb-4c70-bf9e-7945e7dd2eef
+      Cookie:
+      - DSPACE-XSRF-COOKIE=9c8afc31-45eb-4c70-bf9e-7945e7dd2eef
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: '201'
+    headers:
+      date:
+      - Sat, 02 Jul 2022 21:38:28 GMT
+      content-type:
+      - application/hal+json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      content-language:
+      - en
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"id":"d1456d11-760e-4760-b1b7-06988506e4b0","uuid":"d1456d11-760e-4760-b1b7-06988506e4b0","name":"DTS.COLLECTION.001","handle":"10673/2101","metadata":{"dc.identifier.uri":[{"value":"http://hdl.handle.net/10673/2101","language":null,"authority":null,"confidence":-1,"place":0}],"dc.title":[{"value":"DTS.COLLECTION.001","language":null,"authority":null,"confidence":-1,"place":0}]},"type":"collection","_links":{"harvester":{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0/harvester"},"itemtemplate":{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0/itemtemplate"},"license":{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0/license"},"logo":{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0/logo"},"mappedItems":{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0/mappedItems"},"parentCommunity":{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0/parentCommunity"},"adminGroup":{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0/adminGroup"},"submittersGroup":{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0/submittersGroup"},"itemReadGroup":{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0/itemReadGroup"},"bitstreamReadGroup":{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0/bitstreamReadGroup"},"self":{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0"},"workflowGroups":[{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0/workflowGroups/editor","name":"editor"},{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0/workflowGroups/finaleditor","name":"finaleditor"},{"href":"https://demo.dspacedirect.net/server/api/core/collections/d1456d11-760e-4760-b1b7-06988506e4b0/workflowGroups/reviewer","name":"reviewer"}]}}'
+  recorded_at: Sat, 02 Jul 2022 21:38:28 GMT
+recorded_with: VCR 6.1.0

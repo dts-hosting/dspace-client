@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-XSRF-Token: []
+  response:
+    status:
+      code: 200
+      message: '200'
+    headers:
+      date:
+      - Sat, 02 Jul 2022 21:42:26 GMT
+      content-type:
+      - application/hal+json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      set-cookie:
+      - DSPACE-XSRF-COOKIE=91d0db64-3b80-486b-92fb-be2f1ec612ed; Path=/server; Secure;
+        HttpOnly; SameSite=None
+      dspace-xsrf-token:
+      - 91d0db64-3b80-486b-92fb-be2f1ec612ed
+      content-language:
+      - en
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"id":"41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd","uuid":"41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd","name":"DTS.COMMUNITY.001","handle":"10673/2102","metadata":{"dc.identifier.uri":[{"value":"http://hdl.handle.net/10673/2102","language":null,"authority":null,"confidence":-1,"place":0}],"dc.title":[{"value":"DTS.COMMUNITY.001","language":null,"authority":null,"confidence":-1,"place":0}]},"type":"community","_links":{"collections":{"href":"https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/collections"},"logo":{"href":"https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/logo"},"subcommunities":{"href":"https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/subcommunities"},"parentCommunity":{"href":"https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/parentCommunity"},"adminGroup":{"href":"https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/adminGroup"},"self":{"href":"https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd"}}}'
+  recorded_at: Sat, 02 Jul 2022 21:42:26 GMT
+recorded_with: VCR 6.1.0

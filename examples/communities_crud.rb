@@ -13,11 +13,11 @@ client.login
 
 # CREATE
 body = {
-  name: "DTS.XYZ.001",
+  name: "DTS.COMMUNITY.001",
   metadata: {
     "dc.title": [
       {
-        value: "DTS.XYZ.001",
+        value: "DTS.COMMUNITY.001",
         language: nil,
         authority: nil,
         confidence: -1
@@ -40,7 +40,7 @@ puts "READ"
 puts community.inspect
 
 # UPDATE
-body = { op: "replace", path: "/metadata/dc.title/0", value: { value: "DTS.ABC.001" } }
+body = { op: "replace", path: "/metadata/dc.title/0", value: { value: "DTS.COMMUNITY.002" } }
 community = client.communities.update(uuid: community.uuid, **body)
 puts "UPDATE"
 puts community.inspect

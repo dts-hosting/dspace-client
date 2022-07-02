@@ -16,10 +16,11 @@ class CollectionsResourceTest < Minitest::Test
   def test_create
     body = { name: "Collection of Sample Items" }
     stub = stub_request("core/collections", method: :post, body: body,
+                                            params: "parent=7669c72a-3f2a-451f-a3b9-9210e7a4c02f",
                                             response: stub_response(fixture: "collections/create", status: 201))
     client = build_client(stub)
 
-    collection = client.collections.create(**body)
+    collection = client.collections.create(parent: "7669c72a-3f2a-451f-a3b9-9210e7a4c02f", **body)
     assert_equal DSpace::Collection, collection.class
     assert_equal "Collection of Sample Items", collection.name
   end

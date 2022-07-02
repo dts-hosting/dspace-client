@@ -38,7 +38,7 @@ module DSpace
     private
 
     def search(**params)
-      search = params.delete(:method) { |_| "top" }
+      search = params.delete(:method) { |_| raise DSpace::InvalidSearchError, "Search method required." }
       get_request("#{ENDPOINT}/search/#{search}", params: params)
     end
   end

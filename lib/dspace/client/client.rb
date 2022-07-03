@@ -31,12 +31,21 @@ module DSpace
     end
 
     # Resources
+    def browses
+      DSpace::BrowseResource.new(client: self)
+    end
+
     def collections
       DSpace::CollectionResource.new(client: self)
     end
 
     def communities
       DSpace::CommunityResource.new(client: self)
+    end
+
+    def items
+      # https://github.com/DSpace/RestContract/blob/main/items.md
+      raise "Not implemented"
     end
 
     def users

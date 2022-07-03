@@ -1,0 +1,189 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://demo.dspacedirect.net/server/api/authn/login
+    body:
+      encoding: US-ASCII
+      string: "<AUTHENTICATION>"
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-XSRF-Token: []
+  response:
+    status:
+      code: 403
+      message: '403'
+    headers:
+      date:
+      - Sun, 03 Jul 2022 22:38:01 GMT
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      set-cookie:
+      - DSPACE-XSRF-COOKIE=74e7afc7-5b38-43d3-99d7-ee428512fd1a; Path=/server; Secure;
+        HttpOnly; SameSite=None
+      dspace-xsrf-token:
+      - 74e7afc7-5b38-43d3-99d7-ee428512fd1a
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"timestamp":"2022-07-03T22:38:01.012+00:00","status":403,"error":"Forbidden","message":"Access
+        is denied. Invalid CSRF token.","path":"/server/api/authn/login"}'
+  recorded_at: Sun, 03 Jul 2022 22:38:00 GMT
+- request:
+    method: post
+    uri: https://demo.dspacedirect.net/server/api/authn/login
+    body:
+      encoding: US-ASCII
+      string: "<AUTHENTICATION>"
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-XSRF-Token:
+      - 74e7afc7-5b38-43d3-99d7-ee428512fd1a
+      Cookie:
+      - DSPACE-XSRF-COOKIE=74e7afc7-5b38-43d3-99d7-ee428512fd1a
+  response:
+    status:
+      code: 200
+      message: '200'
+    headers:
+      date:
+      - Sun, 03 Jul 2022 22:38:01 GMT
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      set-cookie:
+      - DSPACE-XSRF-COOKIE=; Path=/server; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00
+        GMT; Secure; HttpOnly; SameSite=None, DSPACE-XSRF-COOKIE=68fbc5a3-d252-4ac3-a14c-b3f321d2210f;
+        Path=/server; Secure; HttpOnly; SameSite=None
+      dspace-xsrf-token:
+      - 68fbc5a3-d252-4ac3-a14c-b3f321d2210f
+      authorization:
+      - "<TOKEN>"
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sun, 03 Jul 2022 22:38:01 GMT
+- request:
+    method: get
+    uri: https://demo.dspacedirect.net/server/api/discover/browses/dateissued
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-XSRF-Token:
+      - 68fbc5a3-d252-4ac3-a14c-b3f321d2210f
+      Authorization:
+      - "<TOKEN>"
+      Cookie:
+      - DSPACE-XSRF-COOKIE=68fbc5a3-d252-4ac3-a14c-b3f321d2210f
+  response:
+    status:
+      code: 200
+      message: '200'
+    headers:
+      date:
+      - Sun, 03 Jul 2022 22:38:01 GMT
+      content-type:
+      - application/hal+json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      content-language:
+      - en
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"id":"dateissued","metadataBrowse":false,"dataType":"date","sortOptions":[{"name":"title","metadata":"dc.title"},{"name":"dateissued","metadata":"dc.date.issued"},{"name":"dateaccessioned","metadata":"dc.date.accessioned"}],"order":"ASC","type":"browse","metadata":["dc.date.issued"],"_links":{"items":{"href":"https://demo.dspacedirect.net/server/api/discover/browses/dateissued/items"},"entries":{"href":"https://demo.dspacedirect.net/server/api/discover/browses/dateissued/entries"},"self":{"href":"https://demo.dspacedirect.net/server/api/discover/browses/dateissued"}}}'
+  recorded_at: Sun, 03 Jul 2022 22:38:01 GMT
+recorded_with: VCR 6.1.0

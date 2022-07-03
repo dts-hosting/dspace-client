@@ -2,7 +2,7 @@
 
 module DSpace
   class List
-    attr_reader :data, :page, :size, :total_pages, :next_page, :prev_page, :last_page
+    attr_reader :data, :page, :size, :total_elements, :total_pages, :next_page, :prev_page, :last_page
 
     def self.from_response(response, key:, type:)
       body = response.body
@@ -13,6 +13,18 @@ module DSpace
         size: body.dig("page", "size"),
         total_elements: body.dig("page", "totalElements"),
         total_pages: body.dig("page", "totalPages")
+      )
+    end
+
+    def self.from_search_response(response)
+      body = response.body
+      data = body.dig("_embedded", "searchResult", "_embedded", "objects") || []
+      new(
+        data: data.map { |attrs| resolve_indexable_type(attrs) },
+        page: body.dig("_embedded", "searchResult", "page", "number"),
+        size: body.dig("_embedded", "searchResult", "page", "size"),
+        total_elements: body.dig("_embedded", "searchResult", "page", "totalElements"),
+        total_pages: body.dig("_embedded", "searchResult", "page", "totalPages")
       )
     end
 
@@ -38,6 +50,11 @@ module DSpace
 
     def resolve_last_page(total)
       total - 1 >= 0 ? (total - 1) : 0
+    end
+
+    def self.resolve_indexable_type(attrs)
+      data = attrs.dig("_embedded", "indexableObject")
+      Kernel.const_get("DSpace::#{data["type"].capitalize}").new(data)
     end
   end
 end

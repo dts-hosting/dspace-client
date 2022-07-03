@@ -1,0 +1,190 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://demo.dspacedirect.net/server/api/authn/login
+    body:
+      encoding: US-ASCII
+      string: "<AUTHENTICATION>"
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-XSRF-Token: []
+  response:
+    status:
+      code: 403
+      message: '403'
+    headers:
+      date:
+      - Sun, 03 Jul 2022 23:52:34 GMT
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      set-cookie:
+      - DSPACE-XSRF-COOKIE=38cc7035-9822-4b8d-af5a-c20b36989abd; Path=/server; Secure;
+        HttpOnly; SameSite=None
+      dspace-xsrf-token:
+      - 38cc7035-9822-4b8d-af5a-c20b36989abd
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"timestamp":"2022-07-03T23:52:34.824+00:00","status":403,"error":"Forbidden","message":"Access
+        is denied. Invalid CSRF token.","path":"/server/api/authn/login"}'
+  recorded_at: Sun, 03 Jul 2022 23:52:34 GMT
+- request:
+    method: post
+    uri: https://demo.dspacedirect.net/server/api/authn/login
+    body:
+      encoding: US-ASCII
+      string: "<AUTHENTICATION>"
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-XSRF-Token:
+      - 38cc7035-9822-4b8d-af5a-c20b36989abd
+      Cookie:
+      - DSPACE-XSRF-COOKIE=38cc7035-9822-4b8d-af5a-c20b36989abd
+  response:
+    status:
+      code: 200
+      message: '200'
+    headers:
+      date:
+      - Sun, 03 Jul 2022 23:52:35 GMT
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      set-cookie:
+      - DSPACE-XSRF-COOKIE=; Path=/server; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00
+        GMT; Secure; HttpOnly; SameSite=None, DSPACE-XSRF-COOKIE=d5c6e236-7e38-4ebe-96c8-7ccc27a4890e;
+        Path=/server; Secure; HttpOnly; SameSite=None
+      dspace-xsrf-token:
+      - d5c6e236-7e38-4ebe-96c8-7ccc27a4890e
+      authorization:
+      - "<TOKEN>"
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sun, 03 Jul 2022 23:52:35 GMT
+- request:
+    method: get
+    uri: https://demo.dspacedirect.net/server/api/discover/search/objects?dsoType=collection&query=Closed+Collection
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-XSRF-Token:
+      - d5c6e236-7e38-4ebe-96c8-7ccc27a4890e
+      Authorization:
+      - "<TOKEN>"
+      Cookie:
+      - DSPACE-XSRF-COOKIE=d5c6e236-7e38-4ebe-96c8-7ccc27a4890e
+  response:
+    status:
+      code: 200
+      message: '200'
+    headers:
+      date:
+      - Sun, 03 Jul 2022 23:52:35 GMT
+      content-type:
+      - application/hal+json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      content-language:
+      - en
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6bnVsbCwic2NvcGUiOm51bGwsInF1ZXJ5IjoiQ2xvc2VkIENvbGxlY3Rpb24iLCJhcHBsaWVkRmlsdGVycyI6bnVsbCwic29ydCI6bnVsbCwiY29uZmlndXJhdGlvbiI6bnVsbCwidHlwZSI6ImRpc2NvdmVyIiwiX2xpbmtzIjp7InNlbGYiOnsiaHJlZiI6Imh0dHBzOi8vZGVtby5kc3BhY2VkaXJlY3QubmV0L3NlcnZlci9hcGkvZGlzY292ZXIvc2VhcmNoL29iamVjdHM/cXVlcnk9Q2xvc2VkJTI1MjUyMENvbGxlY3Rpb24mZHNvVHlwZT1jb2xsZWN0aW9uIn19LCJfZW1iZWRkZWQiOnsic2VhcmNoUmVzdWx0Ijp7Il9lbWJlZGRlZCI6eyJvYmplY3RzIjpbeyJoaXRIaWdobGlnaHRzIjp7ImRjLmRlc2NyaXB0aW9uLmFic3RyYWN0IjpbImFsbCA8ZW0+Y2xvc2VkPC9lbT4gbWF0ZXJpYWxzIl0sImRjLnRpdGxlIjpbIjxlbT5DbG9zZWQ8L2VtPiA8ZW0+Q29sbGVjdGlvbjwvZW0+Il19LCJ0eXBlIjoiZGlzY292ZXIiLCJfbGlua3MiOnsiaW5kZXhhYmxlT2JqZWN0Ijp7ImhyZWYiOiJodHRwczovL2RlbW8uZHNwYWNlZGlyZWN0Lm5ldC9zZXJ2ZXIvYXBpL2NvcmUvY29sbGVjdGlvbnMvNTYxZTVkZDgtMDE0ZC00ZmI0LWEwM2MtYjkxNDJkNWRhMjY0In19LCJfZW1iZWRkZWQiOnsiaW5kZXhhYmxlT2JqZWN0Ijp7ImlkIjoiNTYxZTVkZDgtMDE0ZC00ZmI0LWEwM2MtYjkxNDJkNWRhMjY0IiwidXVpZCI6IjU2MWU1ZGQ4LTAxNGQtNGZiNC1hMDNjLWI5MTQyZDVkYTI2NCIsIm5hbWUiOiJDbG9zZWQgQ29sbGVjdGlvbiIsImhhbmRsZSI6IjEwNjczLzExOSIsIm1ldGFkYXRhIjp7ImRjLmRlc2NyaXB0aW9uLmFic3RyYWN0IjpbeyJ2YWx1ZSI6ImFsbCBjbG9zZWQgbWF0ZXJpYWxzIiwibGFuZ3VhZ2UiOm51bGwsImF1dGhvcml0eSI6bnVsbCwiY29uZmlkZW5jZSI6LTEsInBsYWNlIjowfV0sImRjLmlkZW50aWZpZXIudXJpIjpbeyJ2YWx1ZSI6Imh0dHA6Ly9oZGwuaGFuZGxlLm5ldC8xMDY3My8xMTkiLCJsYW5ndWFnZSI6bnVsbCwiYXV0aG9yaXR5IjpudWxsLCJjb25maWRlbmNlIjotMSwicGxhY2UiOjB9XSwiZGMudGl0bGUiOlt7InZhbHVlIjoiQ2xvc2VkIENvbGxlY3Rpb24iLCJsYW5ndWFnZSI6bnVsbCwiYXV0aG9yaXR5IjpudWxsLCJjb25maWRlbmNlIjotMSwicGxhY2UiOjB9XX0sInR5cGUiOiJjb2xsZWN0aW9uIiwiX2xpbmtzIjp7ImhhcnZlc3RlciI6eyJocmVmIjoiaHR0cHM6Ly9kZW1vLmRzcGFjZWRpcmVjdC5uZXQvc2VydmVyL2FwaS9jb3JlL2NvbGxlY3Rpb25zLzU2MWU1ZGQ4LTAxNGQtNGZiNC1hMDNjLWI5MTQyZDVkYTI2NC9oYXJ2ZXN0ZXIifSwiaXRlbXRlbXBsYXRlIjp7ImhyZWYiOiJodHRwczovL2RlbW8uZHNwYWNlZGlyZWN0Lm5ldC9zZXJ2ZXIvYXBpL2NvcmUvY29sbGVjdGlvbnMvNTYxZTVkZDgtMDE0ZC00ZmI0LWEwM2MtYjkxNDJkNWRhMjY0L2l0ZW10ZW1wbGF0ZSJ9LCJsaWNlbnNlIjp7ImhyZWYiOiJodHRwczovL2RlbW8uZHNwYWNlZGlyZWN0Lm5ldC9zZXJ2ZXIvYXBpL2NvcmUvY29sbGVjdGlvbnMvNTYxZTVkZDgtMDE0ZC00ZmI0LWEwM2MtYjkxNDJkNWRhMjY0L2xpY2Vuc2UifSwibG9nbyI6eyJocmVmIjoiaHR0cHM6Ly9kZW1vLmRzcGFjZWRpcmVjdC5uZXQvc2VydmVyL2FwaS9jb3JlL2NvbGxlY3Rpb25zLzU2MWU1ZGQ4LTAxNGQtNGZiNC1hMDNjLWI5MTQyZDVkYTI2NC9sb2dvIn0sIm1hcHBlZEl0ZW1zIjp7ImhyZWYiOiJodHRwczovL2RlbW8uZHNwYWNlZGlyZWN0Lm5ldC9zZXJ2ZXIvYXBpL2NvcmUvY29sbGVjdGlvbnMvNTYxZTVkZDgtMDE0ZC00ZmI0LWEwM2MtYjkxNDJkNWRhMjY0L21hcHBlZEl0ZW1zIn0sInBhcmVudENvbW11bml0eSI6eyJocmVmIjoiaHR0cHM6Ly9kZW1vLmRzcGFjZWRpcmVjdC5uZXQvc2VydmVyL2FwaS9jb3JlL2NvbGxlY3Rpb25zLzU2MWU1ZGQ4LTAxNGQtNGZiNC1hMDNjLWI5MTQyZDVkYTI2NC9wYXJlbnRDb21tdW5pdHkifSwiYWRtaW5Hcm91cCI6eyJocmVmIjoiaHR0cHM6Ly9kZW1vLmRzcGFjZWRpcmVjdC5uZXQvc2VydmVyL2FwaS9jb3JlL2NvbGxlY3Rpb25zLzU2MWU1ZGQ4LTAxNGQtNGZiNC1hMDNjLWI5MTQyZDVkYTI2NC9hZG1pbkdyb3VwIn0sInN1Ym1pdHRlcnNHcm91cCI6eyJocmVmIjoiaHR0cHM6Ly9kZW1vLmRzcGFjZWRpcmVjdC5uZXQvc2VydmVyL2FwaS9jb3JlL2NvbGxlY3Rpb25zLzU2MWU1ZGQ4LTAxNGQtNGZiNC1hMDNjLWI5MTQyZDVkYTI2NC9zdWJtaXR0ZXJzR3JvdXAifSwiaXRlbVJlYWRHcm91cCI6eyJocmVmIjoiaHR0cHM6Ly9kZW1vLmRzcGFjZWRpcmVjdC5uZXQvc2VydmVyL2FwaS9jb3JlL2NvbGxlY3Rpb25zLzU2MWU1ZGQ4LTAxNGQtNGZiNC1hMDNjLWI5MTQyZDVkYTI2NC9pdGVtUmVhZEdyb3VwIn0sImJpdHN0cmVhbVJlYWRHcm91cCI6eyJocmVmIjoiaHR0cHM6Ly9kZW1vLmRzcGFjZWRpcmVjdC5uZXQvc2VydmVyL2FwaS9jb3JlL2NvbGxlY3Rpb25zLzU2MWU1ZGQ4LTAxNGQtNGZiNC1hMDNjLWI5MTQyZDVkYTI2NC9iaXRzdHJlYW1SZWFkR3JvdXAifSwic2VsZiI6eyJocmVmIjoiaHR0cHM6Ly9kZW1vLmRzcGFjZWRpcmVjdC5uZXQvc2VydmVyL2FwaS9jb3JlL2NvbGxlY3Rpb25zLzU2MWU1ZGQ4LTAxNGQtNGZiNC1hMDNjLWI5MTQyZDVkYTI2NCJ9LCJ3b3JrZmxvd0dyb3VwcyI6W3siaHJlZiI6Imh0dHBzOi8vZGVtby5kc3BhY2VkaXJlY3QubmV0L3NlcnZlci9hcGkvY29yZS9jb2xsZWN0aW9ucy81NjFlNWRkOC0wMTRkLTRmYjQtYTAzYy1iOTE0MmQ1ZGEyNjQvd29ya2Zsb3dHcm91cHMvZWRpdG9yIiwibmFtZSI6ImVkaXRvciJ9LHsiaHJlZiI6Imh0dHBzOi8vZGVtby5kc3BhY2VkaXJlY3QubmV0L3NlcnZlci9hcGkvY29yZS9jb2xsZWN0aW9ucy81NjFlNWRkOC0wMTRkLTRmYjQtYTAzYy1iOTE0MmQ1ZGEyNjQvd29ya2Zsb3dHcm91cHMvZmluYWxlZGl0b3IiLCJuYW1lIjoiZmluYWxlZGl0b3IifSx7ImhyZWYiOiJodHRwczovL2RlbW8uZHNwYWNlZGlyZWN0Lm5ldC9zZXJ2ZXIvYXBpL2NvcmUvY29sbGVjdGlvbnMvNTYxZTVkZDgtMDE0ZC00ZmI0LWEwM2MtYjkxNDJkNWRhMjY0L3dvcmtmbG93R3JvdXBzL3Jldmlld2VyIiwibmFtZSI6InJldmlld2VyIn1dfX19fV19LCJfbGlua3MiOnsic2VsZiI6eyJocmVmIjoiaHR0cHM6Ly9kZW1vLmRzcGFjZWRpcmVjdC5uZXQvc2VydmVyL2FwaS9kaXNjb3Zlci9zZWFyY2gvb2JqZWN0cz9xdWVyeT1DbG9zZWQlMjUyMENvbGxlY3Rpb24mZHNvVHlwZT1jb2xsZWN0aW9uIn19LCJwYWdlIjp7Im51bWJlciI6MCwic2l6ZSI6MjAsInRvdGFsUGFnZXMiOjEsInRvdGFsRWxlbWVudHMiOjF9fSwiZmFjZXRzIjpbeyJuYW1lIjoiYXV0aG9yIiwiZmFjZXRUeXBlIjoidGV4dCIsImZhY2V0TGltaXQiOjUsIm1pblZhbHVlIjoiLiBNYXRhcmF6em8sIEphbWVzIE0iLCJtYXhWYWx1ZSI6Ium7gywg6aao5qi6IiwiX2xpbmtzIjp7InNlbGYiOnsiaHJlZiI6Imh0dHBzOi8vZGVtby5kc3BhY2VkaXJlY3QubmV0L3NlcnZlci9hcGkvZGlzY292ZXIvZmFjZXRzL2F1dGhvcj9xdWVyeT1DbG9zZWQlMjUyMENvbGxlY3Rpb24mZHNvVHlwZT1jb2xsZWN0aW9uIn19LCJfZW1iZWRkZWQiOnsidmFsdWVzIjpbXX19LHsibmFtZSI6InN1YmplY3QiLCJmYWNldFR5cGUiOiJoaWVyYXJjaGljYWwiLCJmYWNldExpbWl0Ijo1LCJfbGlua3MiOnsic2VsZiI6eyJocmVmIjoiaHR0cHM6Ly9kZW1vLmRzcGFjZWRpcmVjdC5uZXQvc2VydmVyL2FwaS9kaXNjb3Zlci9mYWNldHMvc3ViamVjdD9xdWVyeT1DbG9zZWQlMjUyMENvbGxlY3Rpb24mZHNvVHlwZT1jb2xsZWN0aW9uIn19LCJfZW1iZWRkZWQiOnsidmFsdWVzIjpbXX19LHsibmFtZSI6ImRhdGVJc3N1ZWQiLCJmYWNldFR5cGUiOiJkYXRlIiwiZmFjZXRMaW1pdCI6NSwibWluVmFsdWUiOiIxLTA0LTAxIiwibWF4VmFsdWUiOiI4MCIsIl9saW5rcyI6eyJzZWxmIjp7ImhyZWYiOiJodHRwczovL2RlbW8uZHNwYWNlZGlyZWN0Lm5ldC9zZXJ2ZXIvYXBpL2Rpc2NvdmVyL2ZhY2V0cy9kYXRlSXNzdWVkP3F1ZXJ5PUNsb3NlZCUyNTIwQ29sbGVjdGlvbiZkc29UeXBlPWNvbGxlY3Rpb24ifX0sIl9lbWJlZGRlZCI6eyJ2YWx1ZXMiOltdfX0seyJuYW1lIjoiaGFzX2NvbnRlbnRfaW5fb3JpZ2luYWxfYnVuZGxlIiwiZmFjZXRUeXBlIjoic3RhbmRhcmQiLCJmYWNldExpbWl0IjoyLCJfbGlua3MiOnsic2VsZiI6eyJocmVmIjoiaHR0cHM6Ly9kZW1vLmRzcGFjZWRpcmVjdC5uZXQvc2VydmVyL2FwaS9kaXNjb3Zlci9mYWNldHMvaGFzX2NvbnRlbnRfaW5fb3JpZ2luYWxfYnVuZGxlP3F1ZXJ5PUNsb3NlZCUyNTIwQ29sbGVjdGlvbiZkc29UeXBlPWNvbGxlY3Rpb24ifX0sIl9lbWJlZGRlZCI6eyJ2YWx1ZXMiOltdfX0seyJuYW1lIjoiZW50aXR5VHlwZSIsImZhY2V0VHlwZSI6InRleHQiLCJmYWNldExpbWl0Ijo1LCJfbGlua3MiOnsic2VsZiI6eyJocmVmIjoiaHR0cHM6Ly9kZW1vLmRzcGFjZWRpcmVjdC5uZXQvc2VydmVyL2FwaS9kaXNjb3Zlci9mYWNldHMvZW50aXR5VHlwZT9xdWVyeT1DbG9zZWQlMjUyMENvbGxlY3Rpb24mZHNvVHlwZT1jb2xsZWN0aW9uIn19LCJfZW1iZWRkZWQiOnsidmFsdWVzIjpbXX19XX19
+  recorded_at: Sun, 03 Jul 2022 23:52:35 GMT
+recorded_with: VCR 6.1.0

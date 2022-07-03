@@ -48,6 +48,10 @@ module DSpace
       raise "Not implemented"
     end
 
+    def search
+      DSpace::SearchResource.new(client: self)
+    end
+
     def users
       DSpace::UserResource.new(client: self)
     end

@@ -22,6 +22,7 @@ require_relative "client/resources/browses"
 require_relative "client/resources/collections"
 require_relative "client/resources/communities"
 require_relative "client/resources/items"
+require_relative "client/resources/search"
 require_relative "client/resources/users"
 
 # DSpace

@@ -28,6 +28,7 @@ end
 module Minitest
   class Test
     def build_client
+      # TODO: Sandbox: https://sandbox.dspacedirect.net/server/api, admin@dspacedirect.org, admin
       config = DSpace::Configuration.new(settings: {
                                            rest_url: ENV.fetch("DSPACE_CLIENT_REST_URL"),
                                            username: ENV.fetch("DSPACE_CLIENT_USERNAME"),

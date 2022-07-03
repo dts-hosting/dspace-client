@@ -7,14 +7,14 @@ A Ruby DSpace REST API client.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'dspace-client'
+gem "dspace-client"
 bundle install
 ```
 
 ## Usage
 
 ```ruby
-config = DSpace::Configuration.new(settings: {rest_url: '', username: '', password: ''})
+config = DSpace::Configuration.new(settings: {rest_url: "", username: "", password: ""})
 # Or find config from env or file ~/.dspaceclientrc
 config = DSpace::Configuration.find # raises error if not found
 
@@ -48,6 +48,14 @@ Run tests & lint:
 bundle exec rake
 bundle exec rubocop
 ```
+
+However the tests / fixtures are run & generated against a live service
+and therefore the `DSPACE_*` env variables are required (and required to be
+correct [meaning the same as was used to generate the fixture]).
+
+In the future the goal is to target a sandbox server that doesn't
+require hidden credentials so new tests / fixtures can be added without
+obfuscating the login details.
 
 ## Contributing
 

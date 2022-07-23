@@ -59,6 +59,10 @@ module DSpace
       DSpace::UserResource.new(client: self)
     end
 
+    def workspace_items
+      DSpace::WorkspaceItemResource.new(client: self)
+    end
+
     def connection
       @connection ||= Faraday.new do |conn|
         conn.url_prefix   = @config.rest_url

@@ -17,6 +17,7 @@ require_relative "client/objects/collection"
 require_relative "client/objects/community"
 require_relative "client/objects/item"
 require_relative "client/objects/user"
+require_relative "client/objects/workspace_item"
 
 require_relative "client/resources/authn"
 require_relative "client/resources/browses"
@@ -26,6 +27,7 @@ require_relative "client/resources/communities"
 require_relative "client/resources/items"
 require_relative "client/resources/search"
 require_relative "client/resources/users"
+require_relative "client/resources/workspace_item"
 
 # DSpace
 module DSpace

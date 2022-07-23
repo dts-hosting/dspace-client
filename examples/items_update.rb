@@ -11,12 +11,7 @@ config = DSpace::Configuration.new(settings: {
 client = DSpace::Client.new(config: config)
 client.login
 
-# browse = client.browses.list.data.first # via all browses
-browse = client.browses.retrieve(id: "dateissued")
-browse.client = client
-puts browse.items.list.data
-
-# get an item bundle
-item = browse.items.list.data.first
-item.client = client
-puts item.bundles.list.data
+item = client.items.list.data.first
+body = { op: "add", path: "/metadata/dc.contributor.author/0", value: "TEST" }
+item = client.items.update(uuid: item.uuid, **body)
+puts item.inspect

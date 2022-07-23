@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://demo.dspacedirect.net/server/api/core/items/5eb19b24-9a37-4386-858e-131eb3db5c66
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-XSRF-Token: []
+  response:
+    status:
+      code: 200
+      message: '200'
+    headers:
+      date:
+      - Sat, 23 Jul 2022 20:51:04 GMT
+      content-type:
+      - application/hal+json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - Apache/2.4.53 (Unix)
+      vary:
+      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      set-cookie:
+      - DSPACE-XSRF-COOKIE=7b3e4b92-0750-499a-8f2e-c1978781a1fc; Path=/server; Secure;
+        HttpOnly; SameSite=None
+      dspace-xsrf-token:
+      - 7b3e4b92-0750-499a-8f2e-c1978781a1fc
+      content-language:
+      - en
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - '0'
+      strict-transport-security:
+      - max-age=315360000, max-age=315360000
+      x-frame-options:
+      - SAMEORIGIN
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      permissions-policy:
+      - interest-cohort=()
+      content-security-policy:
+      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
+      access-control-expose-headers:
+      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
+        X-Requested-With, DSPACE-XSRF-TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"id":"5eb19b24-9a37-4386-858e-131eb3db5c66","uuid":"5eb19b24-9a37-4386-858e-131eb3db5c66","name":"DTS.ITEM.001","handle":"10673/2107","metadata":{"dc.date.accessioned":[{"value":"2022-07-23T20:50:40Z","language":null,"authority":null,"confidence":-1,"place":0}],"dc.date.available":[{"value":"2022-07-23T20:50:40Z","language":null,"authority":null,"confidence":-1,"place":0}],"dc.identifier.uri":[{"value":"http://hdl.handle.net/10673/2107","language":null,"authority":null,"confidence":-1,"place":0}],"dc.title":[{"value":"DTS.ITEM.001","language":null,"authority":null,"confidence":-1,"place":0}]},"inArchive":true,"discoverable":true,"withdrawn":false,"lastModified":"2022-07-23T20:50:40.796+00:00","entityType":null,"type":"item","_links":{"bundles":{"href":"https://demo.dspacedirect.net/server/api/core/items/5eb19b24-9a37-4386-858e-131eb3db5c66/bundles"},"mappedCollections":{"href":"https://demo.dspacedirect.net/server/api/core/items/5eb19b24-9a37-4386-858e-131eb3db5c66/mappedCollections"},"owningCollection":{"href":"https://demo.dspacedirect.net/server/api/core/items/5eb19b24-9a37-4386-858e-131eb3db5c66/owningCollection"},"relationships":{"href":"https://demo.dspacedirect.net/server/api/core/items/5eb19b24-9a37-4386-858e-131eb3db5c66/relationships"},"version":{"href":"https://demo.dspacedirect.net/server/api/core/items/5eb19b24-9a37-4386-858e-131eb3db5c66/version"},"templateItemOf":{"href":"https://demo.dspacedirect.net/server/api/core/items/5eb19b24-9a37-4386-858e-131eb3db5c66/templateItemOf"},"thumbnail":{"href":"https://demo.dspacedirect.net/server/api/core/items/5eb19b24-9a37-4386-858e-131eb3db5c66/thumbnail"},"self":{"href":"https://demo.dspacedirect.net/server/api/core/items/5eb19b24-9a37-4386-858e-131eb3db5c66"}}}'
+  recorded_at: Sat, 23 Jul 2022 20:51:04 GMT
+recorded_with: VCR 6.1.0

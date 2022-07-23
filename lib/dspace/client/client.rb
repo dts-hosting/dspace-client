@@ -35,6 +35,10 @@ module DSpace
       DSpace::BrowseResource.new(client: self)
     end
 
+    def bundles
+      DSpace::BundleResource.new(client: self)
+    end
+
     def collections
       DSpace::CollectionResource.new(client: self)
     end
@@ -44,8 +48,7 @@ module DSpace
     end
 
     def items
-      # https://github.com/DSpace/RestContract/blob/main/items.md
-      raise "Not implemented"
+      DSpace::ItemResource.new(client: self)
     end
 
     def search

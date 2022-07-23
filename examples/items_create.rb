@@ -11,12 +11,30 @@ config = DSpace::Configuration.new(settings: {
 client = DSpace::Client.new(config: config)
 client.login
 
-# browse = client.browses.list.data.first # via all browses
-browse = client.browses.retrieve(id: "dateissued")
-browse.client = client
-puts browse.items.list.data
+# CREATE
+body = {
+  name: "DTS.ITEM.001",
+  metadata: {
+    "dc.title": [
+      {
+        value: "DTS.ITEM.001",
+        language: nil,
+        authority: nil,
+        confidence: -1
+      }
+    ]
+  },
+  inArchive: true,
+  discoverable: true,
+  withdrawn: false,
+  type: "item"
+}
 
-# get an item bundle
-item = browse.items.list.data.first
+collection = client.collections.list.data.first
+item = client.items.create(parent: collection.uuid, **body)
+puts "CREATE"
+puts item.inspect
+
 item.client = client
-puts item.bundles.list.data
+item.bundles.create({ name: "ORIGINAL", metadata: {} })
+puts item.bundles.list.inspect

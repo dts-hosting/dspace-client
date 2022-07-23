@@ -36,6 +36,14 @@ module DSpace
       handle_response(response)
     end
 
+    def payload_request(path, type:, body:, params: {}, headers: {})
+      response = client.connection.send(type, path) do |req|
+        handle_request_with_payload(req, body: body, params: params, headers: headers)
+      end
+      refresh_token(response)
+      handle_response(response)
+    end
+
     def post_request(path, body:, params: {}, headers: {})
       response = client.connection.post(path) do |req|
         handle_request_with_payload(req, body: body, params: params, headers: headers)
@@ -44,6 +52,7 @@ module DSpace
       handle_response(response)
     end
 
+    # Turns out the DSpace api does differentiate between patch / put, so this isn't ideal
     def put_request(path, body:, params: {}, headers: {})
       response = client.connection.patch(path) do |req|
         handle_request_with_payload(req, body: body, params: params, headers: headers)

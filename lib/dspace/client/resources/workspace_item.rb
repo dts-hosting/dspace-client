@@ -6,8 +6,7 @@ module DSpace
     ENDPOINT = "submission/workspaceitems"
 
     def list(**params)
-      # must be scoped to item
-      response = get_request(resolve_endpoint(ENDPOINT), params: params)
+      response = get_request(ENDPOINT, params: params)
       DSpace::List.from_response(response, key: "workspaceitems", type: DSpace::WorkspaceItem)
     end
 

@@ -31,17 +31,17 @@ collection = client.collections.create(parent: community.uuid, **body)
 puts "CREATE"
 puts collection.inspect
 
-# # READ
+# READ
 collection = client.collections.retrieve(uuid: collection.uuid)
 puts "READ"
 puts collection.inspect
 
-# # UPDATE
+# UPDATE
 body = { op: "replace", path: "/metadata/dc.title/0", value: { value: "DTS.COLLECTION.002" } }
 collection = client.collections.update(uuid: collection.uuid, **body)
 puts "UPDATE"
 puts collection.inspect
 
-# # DELETE
+# DELETE
 puts "DELETE"
 puts client.collections.delete(uuid: collection.uuid).inspect

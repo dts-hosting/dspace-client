@@ -59,4 +59,4 @@ obfuscating the login details.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/dspace-client.
+Bug reports and pull requests are welcome on GitHub at https://github.com/DSpaceDirect/dspace-client.

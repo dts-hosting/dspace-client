@@ -6,7 +6,7 @@ module DSpace
     ENDPOINT = "core/communities"
 
     def list(**params)
-      response = get_request(ENDPOINT, params: params)
+      response = get_request(resolve_endpoint(ENDPOINT), params: params) # may be scoped to subcommunity
       DSpace::List.from_response(response, key: "communities", type: DSpace::Community)
     end
 

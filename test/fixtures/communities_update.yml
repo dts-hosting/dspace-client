@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://demo.dspacedirect.net/server/api/authn/login
+    uri: https://demo.dspacedirect.org/server/api/authn/login
     body:
       encoding: US-ASCII
       string: "<AUTHENTICATION>"
@@ -64,7 +64,7 @@ http_interactions:
   recorded_at: Sat, 02 Jul 2022 21:44:11 GMT
 - request:
     method: post
-    uri: https://demo.dspacedirect.net/server/api/authn/login
+    uri: https://demo.dspacedirect.org/server/api/authn/login
     body:
       encoding: US-ASCII
       string: "<AUTHENTICATION>"
@@ -129,7 +129,7 @@ http_interactions:
   recorded_at: Sat, 02 Jul 2022 21:44:12 GMT
 - request:
     method: patch
-    uri: https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd
+    uri: https://demo.dspacedirect.org/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd
     body:
       encoding: UTF-8
       string: '[{"op":"replace","path":"/metadata/dc.title/0","value":{"value":"DTS.COMMUNITY.002"}}]'
@@ -186,6 +186,6 @@ http_interactions:
         X-Requested-With, DSPACE-XSRF-TOKEN
     body:
       encoding: UTF-8
-      string: '{"id":"41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd","uuid":"41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd","name":"DTS.COMMUNITY.002","handle":"10673/2102","metadata":{"dc.identifier.uri":[{"value":"http://hdl.handle.net/10673/2102","language":null,"authority":null,"confidence":-1,"place":0}],"dc.title":[{"value":"DTS.COMMUNITY.002","language":null,"authority":null,"confidence":0,"place":0}]},"type":"community","_links":{"collections":{"href":"https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/collections"},"logo":{"href":"https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/logo"},"subcommunities":{"href":"https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/subcommunities"},"parentCommunity":{"href":"https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/parentCommunity"},"adminGroup":{"href":"https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/adminGroup"},"self":{"href":"https://demo.dspacedirect.net/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd"}}}'
+      string: '{"id":"41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd","uuid":"41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd","name":"DTS.COMMUNITY.002","handle":"10673/2102","metadata":{"dc.identifier.uri":[{"value":"http://hdl.handle.net/10673/2102","language":null,"authority":null,"confidence":-1,"place":0}],"dc.title":[{"value":"DTS.COMMUNITY.002","language":null,"authority":null,"confidence":0,"place":0}]},"type":"community","_links":{"collections":{"href":"https://demo.dspacedirect.org/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/collections"},"logo":{"href":"https://demo.dspacedirect.org/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/logo"},"subcommunities":{"href":"https://demo.dspacedirect.org/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/subcommunities"},"parentCommunity":{"href":"https://demo.dspacedirect.org/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/parentCommunity"},"adminGroup":{"href":"https://demo.dspacedirect.org/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd/adminGroup"},"self":{"href":"https://demo.dspacedirect.org/server/api/core/communities/41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd"}}}'
   recorded_at: Sat, 02 Jul 2022 21:44:13 GMT
 recorded_with: VCR 6.1.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://demo.dspacedirect.net/server/api/authn/login
+    uri: https://demo.dspacedirect.org/server/api/authn/login
     body:
       encoding: US-ASCII
       string: "<AUTHENTICATION>"
@@ -64,7 +64,7 @@ http_interactions:
   recorded_at: Sat, 02 Jul 2022 21:49:27 GMT
 - request:
     method: post
-    uri: https://demo.dspacedirect.net/server/api/authn/login
+    uri: https://demo.dspacedirect.org/server/api/authn/login
     body:
       encoding: US-ASCII
       string: "<AUTHENTICATION>"
@@ -129,7 +129,7 @@ http_interactions:
   recorded_at: Sat, 02 Jul 2022 21:49:28 GMT
 - request:
     method: patch
-    uri: https://demo.dspacedirect.net/server/api/eperson/epersons/de9209ca-3cd9-49a1-a3ea-5fea15c31cb5
+    uri: https://demo.dspacedirect.org/server/api/eperson/epersons/de9209ca-3cd9-49a1-a3ea-5fea15c31cb5
     body:
       encoding: UTF-8
       string: '[{"op":"replace","path":"/canLogin","value":"true"}]'
@@ -186,6 +186,6 @@ http_interactions:
         X-Requested-With, DSPACE-XSRF-TOKEN
     body:
       encoding: UTF-8
-      string: '{"id":"de9209ca-3cd9-49a1-a3ea-5fea15c31cb5","uuid":"de9209ca-3cd9-49a1-a3ea-5fea15c31cb5","name":"user@institution.edu","handle":null,"metadata":{},"netid":null,"lastActive":null,"canLogIn":true,"email":"user@institution.edu","requireCertificate":false,"selfRegistered":false,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/de9209ca-3cd9-49a1-a3ea-5fea15c31cb5/groups"},"self":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/de9209ca-3cd9-49a1-a3ea-5fea15c31cb5"}}}'
+      string: '{"id":"de9209ca-3cd9-49a1-a3ea-5fea15c31cb5","uuid":"de9209ca-3cd9-49a1-a3ea-5fea15c31cb5","name":"user@institution.edu","handle":null,"metadata":{},"netid":null,"lastActive":null,"canLogIn":true,"email":"user@institution.edu","requireCertificate":false,"selfRegistered":false,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.org/server/api/eperson/epersons/de9209ca-3cd9-49a1-a3ea-5fea15c31cb5/groups"},"self":{"href":"https://demo.dspacedirect.org/server/api/eperson/epersons/de9209ca-3cd9-49a1-a3ea-5fea15c31cb5"}}}'
   recorded_at: Sat, 02 Jul 2022 21:49:28 GMT
 recorded_with: VCR 6.1.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://demo.dspacedirect.net/server/api/authn/login
+    uri: https://demo.dspacedirect.org/server/api/authn/login
     body:
       encoding: US-ASCII
       string: "<AUTHENTICATION>"
@@ -64,7 +64,7 @@ http_interactions:
   recorded_at: Sun, 03 Jul 2022 22:38:00 GMT
 - request:
     method: post
-    uri: https://demo.dspacedirect.net/server/api/authn/login
+    uri: https://demo.dspacedirect.org/server/api/authn/login
     body:
       encoding: US-ASCII
       string: "<AUTHENTICATION>"
@@ -129,7 +129,7 @@ http_interactions:
   recorded_at: Sun, 03 Jul 2022 22:38:01 GMT
 - request:
     method: get
-    uri: https://demo.dspacedirect.net/server/api/discover/browses/dateissued
+    uri: https://demo.dspacedirect.org/server/api/discover/browses/dateissued
     body:
       encoding: US-ASCII
       string: ''
@@ -184,6 +184,6 @@ http_interactions:
         X-Requested-With, DSPACE-XSRF-TOKEN
     body:
       encoding: UTF-8
-      string: '{"id":"dateissued","metadataBrowse":false,"dataType":"date","sortOptions":[{"name":"title","metadata":"dc.title"},{"name":"dateissued","metadata":"dc.date.issued"},{"name":"dateaccessioned","metadata":"dc.date.accessioned"}],"order":"ASC","type":"browse","metadata":["dc.date.issued"],"_links":{"items":{"href":"https://demo.dspacedirect.net/server/api/discover/browses/dateissued/items"},"entries":{"href":"https://demo.dspacedirect.net/server/api/discover/browses/dateissued/entries"},"self":{"href":"https://demo.dspacedirect.net/server/api/discover/browses/dateissued"}}}'
+      string: '{"id":"dateissued","metadataBrowse":false,"dataType":"date","sortOptions":[{"name":"title","metadata":"dc.title"},{"name":"dateissued","metadata":"dc.date.issued"},{"name":"dateaccessioned","metadata":"dc.date.accessioned"}],"order":"ASC","type":"browse","metadata":["dc.date.issued"],"_links":{"items":{"href":"https://demo.dspacedirect.org/server/api/discover/browses/dateissued/items"},"entries":{"href":"https://demo.dspacedirect.org/server/api/discover/browses/dateissued/entries"},"self":{"href":"https://demo.dspacedirect.org/server/api/discover/browses/dateissued"}}}'
   recorded_at: Sun, 03 Jul 2022 22:38:01 GMT
 recorded_with: VCR 6.1.0

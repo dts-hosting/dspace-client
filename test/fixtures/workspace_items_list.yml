@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://demo.dspacedirect.net/server/api/authn/login
+    uri: https://demo.dspacedirect.org/server/api/authn/login
     body:
       encoding: US-ASCII
       string: "<AUTHENTICATION>"
@@ -64,7 +64,7 @@ http_interactions:
   recorded_at: Tue, 26 Jul 2022 20:07:44 GMT
 - request:
     method: post
-    uri: https://demo.dspacedirect.net/server/api/authn/login
+    uri: https://demo.dspacedirect.org/server/api/authn/login
     body:
       encoding: US-ASCII
       string: "<AUTHENTICATION>"
@@ -129,7 +129,7 @@ http_interactions:
   recorded_at: Tue, 26 Jul 2022 20:07:45 GMT
 - request:
     method: get
-    uri: https://demo.dspacedirect.net/server/api/submission/workspaceitems
+    uri: https://demo.dspacedirect.org/server/api/submission/workspaceitems
     body:
       encoding: US-ASCII
       string: ''

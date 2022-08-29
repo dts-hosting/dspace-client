@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://demo.dspacedirect.net/server/api/authn/login
+    uri: https://demo.dspacedirect.org/server/api/authn/login
     body:
       encoding: US-ASCII
       string: "<AUTHENTICATION>"
@@ -64,7 +64,7 @@ http_interactions:
   recorded_at: Sat, 02 Jul 2022 21:55:06 GMT
 - request:
     method: post
-    uri: https://demo.dspacedirect.net/server/api/authn/login
+    uri: https://demo.dspacedirect.org/server/api/authn/login
     body:
       encoding: US-ASCII
       string: "<AUTHENTICATION>"
@@ -129,7 +129,7 @@ http_interactions:
   recorded_at: Sat, 02 Jul 2022 21:55:07 GMT
 - request:
     method: get
-    uri: https://demo.dspacedirect.net/server/api/eperson/epersons/search/byEmail?email=demo%40dspacedirect.org
+    uri: https://demo.dspacedirect.org/server/api/eperson/epersons/search/byEmail?email=demo%40dspacedirect.org
     body:
       encoding: US-ASCII
       string: ''
@@ -184,11 +184,11 @@ http_interactions:
         X-Requested-With, DSPACE-XSRF-TOKEN
     body:
       encoding: UTF-8
-      string: '{"id":"575d0b48-a2f9-4d91-bca4-0ab788392339","uuid":"575d0b48-a2f9-4d91-bca4-0ab788392339","name":"demo@dspacedirect.org","handle":null,"metadata":{"dspace.agreements.cookies":[{"value":"{\"authentication\":true,\"preferences\":true,\"acknowledgement\":true,\"google-analytics\":true}","language":null,"authority":null,"confidence":-1,"place":0}],"dspace.agreements.end-user":[{"value":"true","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.firstname":[{"value":"DSpaceDirect","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.language":[{"value":"en","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"Administrator","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.phone":[{"value":"2157280396","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":"2022-07-02T21:55:07.367+00:00","canLogIn":true,"email":"demo@dspacedirect.org","requireCertificate":false,"selfRegistered":false,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/575d0b48-a2f9-4d91-bca4-0ab788392339/groups"},"self":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/575d0b48-a2f9-4d91-bca4-0ab788392339"}}}'
+      string: '{"id":"575d0b48-a2f9-4d91-bca4-0ab788392339","uuid":"575d0b48-a2f9-4d91-bca4-0ab788392339","name":"demo@dspacedirect.org","handle":null,"metadata":{"dspace.agreements.cookies":[{"value":"{\"authentication\":true,\"preferences\":true,\"acknowledgement\":true,\"google-analytics\":true}","language":null,"authority":null,"confidence":-1,"place":0}],"dspace.agreements.end-user":[{"value":"true","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.firstname":[{"value":"DSpaceDirect","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.language":[{"value":"en","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"Administrator","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.phone":[{"value":"2157280396","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":"2022-07-02T21:55:07.367+00:00","canLogIn":true,"email":"demo@dspacedirect.org","requireCertificate":false,"selfRegistered":false,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.org/server/api/eperson/epersons/575d0b48-a2f9-4d91-bca4-0ab788392339/groups"},"self":{"href":"https://demo.dspacedirect.org/server/api/eperson/epersons/575d0b48-a2f9-4d91-bca4-0ab788392339"}}}'
   recorded_at: Sat, 02 Jul 2022 21:55:07 GMT
 - request:
     method: get
-    uri: https://demo.dspacedirect.net/server/api/eperson/epersons/search/byEmail?email=demo%40dspacedirect.org
+    uri: https://demo.dspacedirect.org/server/api/eperson/epersons/search/byEmail?email=demo%40dspacedirect.org
     body:
       encoding: US-ASCII
       string: ''
@@ -243,6 +243,6 @@ http_interactions:
         X-Requested-With, DSPACE-XSRF-TOKEN
     body:
       encoding: UTF-8
-      string: '{"id":"575d0b48-a2f9-4d91-bca4-0ab788392339","uuid":"575d0b48-a2f9-4d91-bca4-0ab788392339","name":"demo@dspacedirect.org","handle":null,"metadata":{"dspace.agreements.cookies":[{"value":"{\"authentication\":true,\"preferences\":true,\"acknowledgement\":true,\"google-analytics\":true}","language":null,"authority":null,"confidence":-1,"place":0}],"dspace.agreements.end-user":[{"value":"true","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.firstname":[{"value":"DSpaceDirect","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.language":[{"value":"en","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"Administrator","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.phone":[{"value":"2157280396","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":"2022-07-02T21:55:07.367+00:00","canLogIn":true,"email":"demo@dspacedirect.org","requireCertificate":false,"selfRegistered":false,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/575d0b48-a2f9-4d91-bca4-0ab788392339/groups"},"self":{"href":"https://demo.dspacedirect.net/server/api/eperson/epersons/575d0b48-a2f9-4d91-bca4-0ab788392339"}}}'
+      string: '{"id":"575d0b48-a2f9-4d91-bca4-0ab788392339","uuid":"575d0b48-a2f9-4d91-bca4-0ab788392339","name":"demo@dspacedirect.org","handle":null,"metadata":{"dspace.agreements.cookies":[{"value":"{\"authentication\":true,\"preferences\":true,\"acknowledgement\":true,\"google-analytics\":true}","language":null,"authority":null,"confidence":-1,"place":0}],"dspace.agreements.end-user":[{"value":"true","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.firstname":[{"value":"DSpaceDirect","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.language":[{"value":"en","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"Administrator","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.phone":[{"value":"2157280396","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":"2022-07-02T21:55:07.367+00:00","canLogIn":true,"email":"demo@dspacedirect.org","requireCertificate":false,"selfRegistered":false,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.org/server/api/eperson/epersons/575d0b48-a2f9-4d91-bca4-0ab788392339/groups"},"self":{"href":"https://demo.dspacedirect.org/server/api/eperson/epersons/575d0b48-a2f9-4d91-bca4-0ab788392339"}}}'
   recorded_at: Sat, 02 Jul 2022 21:55:08 GMT
 recorded_with: VCR 6.1.0

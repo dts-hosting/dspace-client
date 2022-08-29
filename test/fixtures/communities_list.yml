@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://demo.dspacedirect.net/server/api/core/communities
+    uri: https://demo.dspacedirect.org/server/api/core/communities
     body:
       encoding: US-ASCII
       string: ''

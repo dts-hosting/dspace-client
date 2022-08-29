@@ -55,6 +55,10 @@ module DSpace
       DSpace::SearchResource.new(client: self)
     end
 
+    def statistics
+      DSpace::StatisticsResource.new(client: self)
+    end
+
     def users
       DSpace::UserResource.new(client: self)
     end

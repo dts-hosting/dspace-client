@@ -22,20 +22,20 @@ def get_views(type, data)
   end
 end
 
-def collect_stats(client, collection, item)
+def collect_stats(client, collection, item, time)
   stats = client.statistics.objects(uri: item._links.self.href)
   visits = get_views("TotalVisits", stats.data)
   downloads = get_views("TotalDownloads", stats.data)
 
   CSV.open(REPORT_FILE, "a") do |csv|
     csv << REPORT_HEADERS if csv.stat.zero?
-    csv << [collection.name, item.name, visits, downloads, Time.now.utc.to_s]
+    csv << [collection.name, item.name, visits, downloads, time]
   end
 end
 
 client.collections.all.each do |collection|
   puts "Gathering stats for collection: #{collection.name}"
   client.search.all(scope: collection.uuid, dsoType: "item").each do |item|
-    collect_stats(client, collection, item)
+    collect_stats(client, collection, item, Time.now.utc.to_s)
   end
 end

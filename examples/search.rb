@@ -18,13 +18,12 @@ puts search.total_elements
 puts search.total_pages
 
 # Specific collection record
-search = client.search.objects(query: "Closed Collection", dsoType: "collection")
+search = client.search.objects(query: "Publications", dsoType: "collection")
 puts search.data
 puts search.total_elements
 puts search.total_pages
 
 # Items scoped to collection record
-search = client.search.objects(scope: search.data.first.uuid, dsoType: "item")
-puts search.data
-puts search.total_elements
-puts search.total_pages
+client.search.all(scope: search.data.first.uuid, dsoType: "item").each do |i|
+  puts i.inspect
+end

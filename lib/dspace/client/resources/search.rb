@@ -10,5 +10,6 @@ module DSpace
       response = get_request("#{ENDPOINT}/objects", params: params)
       DSpace::List.from_search_response(response)
     end
+    alias list objects
   end
 end

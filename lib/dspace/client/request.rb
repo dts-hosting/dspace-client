@@ -9,12 +9,12 @@ module DSpace
       @endpoint = endpoint
     end
 
-    def all
+    def all(**params)
       Enumerator.new do |yielder|
-        records = list(page: 0)
+        records = list(page: 0, **params)
         records.data.each { |d| yielder << d }
         while records.next_page
-          records = list(page: records.next_page)
+          records = list(page: records.next_page, **params)
           records.data.each { |d| yielder << d }
         end
       end.lazy
@@ -92,6 +92,8 @@ module DSpace
         raise Error, "Not allowed to perform the action. #{response.body["error"]}"
       when 404
         raise Error, "No results found for request. #{response.body["error"]}"
+      when 422
+        raise Error, "Unprocessable or invalid entity. #{response.body["error"]}"
       when 429
         raise Error, "Request exceeded the API rate limit. #{response.body["error"]}"
       when 500

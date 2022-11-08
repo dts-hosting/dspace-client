@@ -8,16 +8,16 @@ module DSpace
     def list(**params)
       # must be scoped to item
       response = get_request(resolve_endpoint(ENDPOINT), params: params)
-      DSpace::List.from_response(response, key: "bundles", type: DSpace::Bundle)
+      DSpace::List.from_response(client, response, key: "bundles", type: DSpace::Bundle)
     end
 
     def create(**attributes)
       # must be scoped to item
-      DSpace::Bundle.new post_request(resolve_endpoint(ENDPOINT), body: attributes).body
+      DSpace::Bundle.new client, post_request(resolve_endpoint(ENDPOINT), body: attributes).body
     end
 
     def retrieve(uuid:)
-      DSpace::Bundle.new get_request("#{ENDPOINT}/#{uuid}").body
+      DSpace::Bundle.new client, get_request("#{ENDPOINT}/#{uuid}").body
     end
 
     def delete(uuid:)

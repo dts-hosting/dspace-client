@@ -35,6 +35,5 @@ item = client.items.create(parent: collection.uuid, **body)
 puts "CREATE"
 puts item.inspect
 
-item.client = client
 item.bundles.create({ name: "ORIGINAL", metadata: {} })
 puts item.bundles.list.inspect

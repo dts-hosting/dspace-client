@@ -4,7 +4,10 @@ require "ostruct"
 
 module DSpace
   class Object < OpenStruct
-    def initialize(attributes)
+    attr_reader :client
+
+    def initialize(client, attributes)
+      @client = client
       super to_ostruct(attributes)
     end
 

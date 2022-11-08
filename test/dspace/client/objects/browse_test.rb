@@ -7,7 +7,6 @@ class BrowseObjectTest < Minitest::Test
     client = build_client
     VCR.use_cassette("browse_items") do
       browse = client.browses.retrieve(id: "dateissued")
-      browse.client = client
       items = browse.items.list
       assert_equal DSpace::List, items.class
       assert_equal DSpace::Item, items.data.first.class

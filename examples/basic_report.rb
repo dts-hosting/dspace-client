@@ -48,7 +48,6 @@ def get_views(type, data)
 end
 
 def traverse(community, client)
-  community.client = client
   yield community if block_given?
   return unless community.subcommunities.list.total_elements.positive?
 

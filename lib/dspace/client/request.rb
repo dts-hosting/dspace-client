@@ -109,9 +109,9 @@ module DSpace
     def handle_search(path:, resource:, key:, method:, list: true, **params)
       response = get_request("#{path}/search/#{method}", params: params)
       if list
-        DSpace::List.from_response(response, key: key, type: resource)
+        DSpace::List.from_response(client, response, key: key, type: resource)
       else
-        resource.new get_request("#{path}/search/#{method}", params: params).body
+        resource.new client, get_request("#{path}/search/#{method}", params: params).body
       end
     end
 

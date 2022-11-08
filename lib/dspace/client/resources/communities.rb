@@ -7,19 +7,19 @@ module DSpace
 
     def list(**params)
       response = get_request(resolve_endpoint(ENDPOINT), params: params) # may be scoped to subcommunity
-      DSpace::List.from_response(response, key: "communities", type: DSpace::Community)
+      DSpace::List.from_response(client, response, key: "communities", type: DSpace::Community)
     end
 
     def create(**attributes)
-      DSpace::Community.new post_request(ENDPOINT, body: attributes).body
+      DSpace::Community.new client, post_request(ENDPOINT, body: attributes).body
     end
 
     def retrieve(uuid:)
-      DSpace::Community.new get_request("#{ENDPOINT}/#{uuid}").body
+      DSpace::Community.new client, get_request("#{ENDPOINT}/#{uuid}").body
     end
 
     def update(uuid:, **attributes)
-      DSpace::Community.new put_request("#{ENDPOINT}/#{uuid}", body: [attributes]).body
+      DSpace::Community.new client, put_request("#{ENDPOINT}/#{uuid}", body: [attributes]).body
     end
 
     def delete(uuid:)

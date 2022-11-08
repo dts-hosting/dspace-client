@@ -13,7 +13,6 @@ client.login
 
 # scoped collections
 community = client.communities.list.data.first
-community.client = client # add client to community to make scoped requests
 community.collections.all.each do |collection|
   puts collection.name
 end

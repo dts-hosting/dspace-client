@@ -7,11 +7,11 @@ module DSpace
 
     def list(**params)
       response = get_request(ENDPOINT, params: params)
-      DSpace::List.from_response(response, key: "workspaceitems", type: DSpace::WorkspaceItem)
+      DSpace::List.from_response(client, response, key: "workspaceitems", type: DSpace::WorkspaceItem)
     end
 
     def retrieve(id:)
-      DSpace::WorkspaceItem.new get_request("#{ENDPOINT}/#{id}").body
+      DSpace::WorkspaceItem.new client, get_request("#{ENDPOINT}/#{id}").body
     end
 
     def delete(id:)

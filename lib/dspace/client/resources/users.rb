@@ -7,19 +7,19 @@ module DSpace
 
     def list(**params)
       response = get_request(ENDPOINT, params: params)
-      DSpace::List.from_response(response, key: "epersons", type: DSpace::User)
+      DSpace::List.from_response(client, response, key: "epersons", type: DSpace::User)
     end
 
     def create(**attributes)
-      DSpace::User.new post_request(ENDPOINT, body: attributes).body
+      DSpace::User.new client, post_request(ENDPOINT, body: attributes).body
     end
 
     def retrieve(uuid:)
-      DSpace::User.new get_request("#{ENDPOINT}/#{uuid}").body
+      DSpace::User.new client, get_request("#{ENDPOINT}/#{uuid}").body
     end
 
     def update(uuid:, **attributes)
-      DSpace::User.new put_request("#{ENDPOINT}/#{uuid}", body: [attributes]).body
+      DSpace::User.new client, put_request("#{ENDPOINT}/#{uuid}", body: [attributes]).body
     end
 
     def delete(uuid:)

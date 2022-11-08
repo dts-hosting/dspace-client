@@ -7,7 +7,7 @@ module DSpace
 
     def objects(**params)
       response = get_request("#{ENDPOINT}/search/object", params: params)
-      DSpace::List.from_response(response, key: "usagereports", type: DSpace::UsageReport)
+      DSpace::List.from_response(client, response, key: "usagereports", type: DSpace::UsageReport)
     end
   end
 end

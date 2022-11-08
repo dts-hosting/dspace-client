@@ -13,10 +13,8 @@ client.login
 
 # browse = client.browses.list.data.first # via all browses
 browse = client.browses.retrieve(id: "dateissued")
-browse.client = client
 puts browse.items.list.data
 
 # get an item bundle
 item = browse.items.list.data.first
-item.client = client
 puts item.bundles.list.data

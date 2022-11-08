@@ -7,11 +7,11 @@ module DSpace
 
     def list(**params)
       response = get_request(resolve_endpoint(ENDPOINT), params: params)
-      DSpace::List.from_response(response, key: "browses", type: DSpace::Browse)
+      DSpace::List.from_response(client, response, key: "browses", type: DSpace::Browse)
     end
 
     def retrieve(id:)
-      DSpace::Browse.new get_request("#{ENDPOINT}/#{id}").body
+      DSpace::Browse.new client, get_request("#{ENDPOINT}/#{id}").body
     end
   end
 end

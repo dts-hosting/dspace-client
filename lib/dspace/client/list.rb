@@ -4,11 +4,11 @@ module DSpace
   class List
     attr_reader :data, :page, :size, :total_elements, :total_pages, :next_page, :prev_page, :last_page
 
-    def self.from_response(response, key:, type:)
+    def self.from_response(client, response, key:, type:)
       body = response.body
       data = body.dig("_embedded", key) || []
       new(
-        data: data.map { |attrs| type.new(attrs) },
+        data: data.map { |attrs| type.new(client, attrs) },
         page: body.dig("page", "number"),
         size: body.dig("page", "size"),
         total_elements: body.dig("page", "totalElements"),
@@ -16,11 +16,11 @@ module DSpace
       )
     end
 
-    def self.from_search_response(response)
+    def self.from_search_response(client, response)
       body = response.body
       data = body.dig("_embedded", "searchResult", "_embedded", "objects") || []
       new(
-        data: data.map { |attrs| resolve_indexable_type(attrs) },
+        data: data.map { |attrs| resolve_indexable_type(client, attrs) },
         page: body.dig("_embedded", "searchResult", "page", "number"),
         size: body.dig("_embedded", "searchResult", "page", "size"),
         total_elements: body.dig("_embedded", "searchResult", "page", "totalElements"),
@@ -52,9 +52,9 @@ module DSpace
       total - 1 >= 0 ? (total - 1) : 0
     end
 
-    def self.resolve_indexable_type(attrs)
+    def self.resolve_indexable_type(client, attrs)
       data = attrs.dig("_embedded", "indexableObject")
-      Kernel.const_get("DSpace::#{data["type"].capitalize}").new(data)
+      Kernel.const_get("DSpace::#{data["type"].capitalize}").new(client, data)
     end
   end
 end

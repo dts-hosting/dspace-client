@@ -3,10 +3,13 @@
 module DSpace
   class StatisticsResource < Request
     CONTRACT = "https://github.com/DSpace/RestContract/blob/main/statistics-reports.md"
-    ENDPOINT = "statistics/usagereports"
+
+    def default_endpoint
+      "statistics/usagereports"
+    end
 
     def objects(**params)
-      response = get_request("#{ENDPOINT}/search/object", params: params)
+      response = get_request("search/object", params: params)
       DSpace::List.from_response(client, response, key: "usagereports", type: DSpace::UsageReport)
     end
   end

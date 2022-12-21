@@ -6,7 +6,7 @@ module DSpace
 
     def initialize(client:, endpoint: nil)
       @client   = client
-      @endpoint = endpoint
+      @endpoint = endpoint || default_endpoint
     end
 
     def all(**params)
@@ -20,32 +20,32 @@ module DSpace
       end.lazy
     end
 
-    def delete_request(path, params: {}, headers: {})
-      response = client.connection.delete(path) do |req|
+    def delete_request(path = "", params: {}, headers: {})
+      response = client.connection.delete(resolve_path(path)) do |req|
         handle_request(req, params: params, headers: headers)
       end
       refresh_token(response)
       handle_response(response)
     end
 
-    def get_request(path, params: {}, headers: {})
-      response = client.connection.get(path) do |req|
+    def get_request(path = "", params: {}, headers: {})
+      response = client.connection.get(resolve_path(path)) do |req|
         handle_request(req, params: params, headers: headers)
       end
       refresh_token(response)
       handle_response(response)
     end
 
-    def payload_request(path, type:, body:, params: {}, headers: {})
-      response = client.connection.send(type, path) do |req|
+    def payload_request(path = "", type:, body:, params: {}, headers: {})
+      response = client.connection.send(resolve_path(path), path) do |req|
         handle_request_with_payload(req, body: body, params: params, headers: headers)
       end
       refresh_token(response)
       handle_response(response)
     end
 
-    def post_request(path, body:, params: {}, headers: {})
-      response = client.connection.post(path) do |req|
+    def post_request(path = "", body:, params: {}, headers: {})
+      response = client.connection.post(resolve_path(path)) do |req|
         handle_request_with_payload(req, body: body, params: params, headers: headers)
       end
       refresh_token(response)
@@ -53,8 +53,8 @@ module DSpace
     end
 
     # Turns out the DSpace api does differentiate between patch / put, so this isn't ideal
-    def put_request(path, body:, params: {}, headers: {})
-      response = client.connection.patch(path) do |req|
+    def put_request(path = "", body:, params: {}, headers: {})
+      response = client.connection.patch(resolve_path(path)) do |req|
         handle_request_with_payload(req, body: body, params: params, headers: headers)
       end
       refresh_token(response)
@@ -62,6 +62,10 @@ module DSpace
     end
 
     private
+
+    def default_endpoint
+      ""
+    end
 
     def handle_request(req, params:, headers:)
       req.params  = params
@@ -106,12 +110,12 @@ module DSpace
     end
     # rubocop:enable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength
 
-    def handle_search(path:, resource:, key:, method:, list: true, **params)
-      response = get_request("#{path}/search/#{method}", params: params)
+    def handle_search(resource:, key:, method:, list: true, **params)
+      response = get_request("search/#{method}", params: params)
       if list
         DSpace::List.from_response(client, response, key: key, type: resource)
       else
-        resource.new client, get_request("#{path}/search/#{method}", params: params).body
+        resource.new client, get_request("search/#{method}", params: params).body
       end
     end
 
@@ -125,10 +129,8 @@ module DSpace
       response
     end
 
-    # If the endpoint for the request has been initialized then treat the path as a fallback.
-    # This is used by some resource methods to apply the endpoint for subrecords supplied by objects
-    def resolve_endpoint(path)
-      endpoint || path
+    def resolve_path(path)
+      path.empty? ? endpoint : "#{endpoint}/#{path}"
     end
   end
 end

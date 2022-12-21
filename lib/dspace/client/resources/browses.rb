@@ -3,15 +3,18 @@
 module DSpace
   class BrowseResource < Request
     CONTRACT = "https://github.com/DSpace/RestContract/blob/main/browses.md"
-    ENDPOINT = "discover/browses"
+
+    def default_endpoint
+      "discover/browses"
+    end
 
     def list(**params)
-      response = get_request(resolve_endpoint(ENDPOINT), params: params)
+      response = get_request(params: params)
       DSpace::List.from_response(client, response, key: "browses", type: DSpace::Browse)
     end
 
     def retrieve(id:)
-      DSpace::Browse.new client, get_request("#{ENDPOINT}/#{id}").body
+      DSpace::Browse.new client, get_request(id).body
     end
   end
 end

@@ -31,6 +31,10 @@ module DSpace
     end
 
     # Resources
+    def bitstreams
+      DSpace::BitstreamResource.new(client: self)
+    end
+
     def browses
       DSpace::BrowseResource.new(client: self)
     end

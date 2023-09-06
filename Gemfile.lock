@@ -103,6 +103,7 @@ DEPENDENCIES
   debug (>= 1.0.0)
   dspace-client!
   minitest (>= 5.0.5)
+  parallel (~> 1.23)
   rake (~> 13.0)
   rubocop (~> 1.7)
   ruby-debug-ide

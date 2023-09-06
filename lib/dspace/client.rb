@@ -4,6 +4,7 @@ require "csv"
 require "faraday"
 require "faraday-cookie_jar"
 require "faraday_middleware"
+require "parallel"
 
 require_relative "client/client"
 require_relative "client/configuration"

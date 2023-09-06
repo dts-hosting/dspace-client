@@ -18,5 +18,5 @@ begin
     client.basic_report("report.csv").process(opts: { page_size: 100, throttle: 0 })
   end)
 rescue StandardError => e
-  puts "There was an error while processing the report: #{e.backtrace}"
+  puts "There was an error while processing the report: #{e.message}"
 end

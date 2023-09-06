@@ -14,58 +14,51 @@ module DSpace
     def process(opts: { page_size: 20, throttle: 0 })
       FileUtils.rm_f output_file
       size = opts[:page_size]
-      client.communities.all(size: size).each do |c|
-        traverse(c) do |community|
-          community.collections.all(size: size).each do |collection|
-            puts "Gathering stats for collection: [#{community.name}] #{collection.name}"
-            client.search.all(scope: collection.uuid, dsoType: "item", size: size).each do |item|
-              collect_stats(community, collection, item, Time.now.utc.iso8601)
-            end
-            sleep opts[:throttle]
-          end
-          break
+
+      client.items.all(embed: "owningCollection/parentCommunity", size: size).each do |item|
+        begin
+          data = collect_stats(item, Time.now.utc.iso8601)
+          write_data(data)
+          sleep opts[:throttle]
+        rescue StandardError => e
+          puts "Error processing item\n#{item.inspect}:\n#{e.message}"
         end
       end
     end
 
     private
 
-    def collect_stats(community, collection, item, date)
+    def collect_stats(item, date)
       stats = client.statistics.objects(uri: item._links.self.href)
-      data  = {
+      collection = item["_embedded"].owningCollection
+      community = collection["_embedded"].parentCommunity
+      {
         community: community.name,
         collection: collection.name,
         item: item.name,
-        visits: get_views("TotalVisits", stats.data),
-        downloads: get_views("TotalDownloads", stats.data),
+        visits: get_views(stats.data, "TotalVisits"),
+        downloads: get_views(stats.data, "TotalDownloads"),
         created: item.metadata["dc.date.accessioned"]&.first&.value,
         updated: item.lastModified,
         url: get_stats_url(item),
         date: date
       }
-
-      CSV.open(output_file, "a") do |csv|
-        csv << HEADERS if csv.stat.zero?
-        csv << data.values_at(*HEADERS.map(&:to_sym))
-      end
     end
 
-    def get_stats_url(record)
-      record._links.self.href.gsub("/server/api/core/", "/statistics/")
+    def get_stats_url(data)
+      data._links.self.href.gsub("/server/api/core/", "/statistics/")
     end
 
-    def get_views(type, data)
+    def get_views(data, type)
       data.find { |r| r["report-type"] == type }.points.inject(0) do |sum, p|
         sum + p.values.views
       end
     end
 
-    def traverse(community)
-      yield community if block_given?
-      return unless community.subcommunities.list.total_elements.positive?
-
-      community.subcommunities.all.each do |subcommunity|
-        traverse(subcommunity, client)
+    def write_data(data)
+      CSV.open(output_file, "a") do |csv|
+        csv << HEADERS if csv.stat.zero?
+        csv << data.values_at(*HEADERS.map(&:to_sym))
       end
     end
   end

@@ -6,4 +6,6 @@
 /pkg/
 /spec/reports/
 /tmp/
+*.bak
+.DS_Store
 report.csv

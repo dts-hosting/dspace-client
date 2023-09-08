@@ -71,6 +71,11 @@ module DSpace
       DSpace::WorkspaceItemResource.new(client: self)
     end
 
+    # Tasks
+    def basic_report(output_file)
+      DSpace::BasicReportTask.new(client: self, output_file: output_file)
+    end
+
     def connection
       @connection ||= Faraday.new do |conn|
         conn.url_prefix   = @config.rest_url

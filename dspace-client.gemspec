@@ -36,4 +36,12 @@ Gem::Specification.new do |spec|
   spec.add_dependency "faraday", "~> 1.10"
   spec.add_dependency "faraday-cookie_jar"
   spec.add_dependency "faraday_middleware", "~> 1.2"
+  spec.add_dependency "parallel", "~> 1.23"
+
+  spec.add_development_dependency "debug", ">= 1.0.0"
+  spec.add_development_dependency "minitest", ">= 5.0.5"
+  spec.add_development_dependency "rake", "~> 13.0"
+  spec.add_development_dependency "rubocop", "~> 1.7"
+  spec.add_development_dependency "ruby-debug-ide"
+  spec.add_development_dependency "vcr", "~> 6.1"
 end

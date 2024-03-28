@@ -15,7 +15,7 @@ module DSpace
     def process(opts: { page_size: 20, throttle: 0 })
       FileUtils.rm_f output_file
       size = opts[:page_size]
-      data = []
+      data = Queue.new
 
       client.items.all(embed: "owningCollection/parentCommunity", size: size).each_slice(size) do |items|
         Parallel.map(items, in_threads: THREAD_COUNT) do |item|

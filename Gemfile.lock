@@ -5,6 +5,7 @@ PATH
       faraday (~> 1.10)
       faraday-cookie_jar
       faraday_middleware (~> 1.2)
+      parallel (~> 1.23)
 
 GEM
   remote: https://rubygems.org/
@@ -103,7 +104,6 @@ DEPENDENCIES
   debug (>= 1.0.0)
   dspace-client!
   minitest (>= 5.0.5)
-  parallel (~> 1.23)
   rake (~> 13.0)
   rubocop (~> 1.7)
   ruby-debug-ide

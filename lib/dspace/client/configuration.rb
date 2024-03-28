@@ -6,10 +6,10 @@ module DSpace
     attr_reader :adapter, :rest_url, :username, :password, :ssl_verify, :stubs
 
     def initialize(settings: {})
-      @adapter    = settings.fetch(:adaptor, Faraday.default_adapter)
-      @rest_url   = settings.fetch(:rest_url) { raise DSpace::ConfigurationError, "REST URL required" }
+      @adapter = settings.fetch(:adaptor, Faraday.default_adapter)
+      @rest_url = settings.fetch(:rest_url) { raise DSpace::ConfigurationError, "REST URL required" }
       @ssl_verify = settings.fetch(:ssl_verify, true)
-      @stubs      = settings.fetch(:stubs, nil)
+      @stubs = settings.fetch(:stubs, nil)
 
       # authentication
       @username = settings.fetch(:username) { raise DSpace::ConfigurationError, "USERNAME required" }

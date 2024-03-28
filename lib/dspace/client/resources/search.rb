@@ -13,6 +13,6 @@ module DSpace
       response = get_request("objects", params: params)
       DSpace::List.from_search_response(client, response)
     end
-    alias list objects
+    alias_method :list, :objects
   end
 end

@@ -13,7 +13,7 @@ VCR.configure do |config|
   config.hook_into :faraday
 
   config.filter_sensitive_data("<AUTHENTICATION>") do |interaction|
-    interaction.request.body if interaction.request.body =~ /user.*password/
+    interaction.request.body if /user.*password/.match?(interaction.request.body)
   end
 
   config.filter_sensitive_data("<TOKEN>") do |interaction|
@@ -30,10 +30,10 @@ module Minitest
     def build_client
       # TODO: Sandbox: https://sandbox.dspacedirect.net/server/api, admin@dspacedirect.org, admin
       config = DSpace::Configuration.new(settings: {
-                                           rest_url: ENV.fetch("DSPACE_CLIENT_REST_URL"),
-                                           username: ENV.fetch("DSPACE_CLIENT_USERNAME"),
-                                           password: ENV.fetch("DSPACE_CLIENT_PASSWORD")
-                                         })
+        rest_url: ENV.fetch("DSPACE_CLIENT_REST_URL"),
+        username: ENV.fetch("DSPACE_CLIENT_USERNAME"),
+        password: ENV.fetch("DSPACE_CLIENT_PASSWORD")
+      })
       DSpace::Client.new(config: config)
     end
   end

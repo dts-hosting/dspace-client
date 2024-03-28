@@ -15,7 +15,7 @@ class UsersResourceTest < Minitest::Test
   end
 
   def test_create
-    body = { name: "user@institution.edu", email: "user@institution.edu" }
+    body = {name: "user@institution.edu", email: "user@institution.edu"}
     client = build_client
     VCR.use_cassette("users_create") do
       client.login
@@ -26,7 +26,7 @@ class UsersResourceTest < Minitest::Test
   end
 
   def test_retrieve
-    uuid   = "de9209ca-3cd9-49a1-a3ea-5fea15c31cb5"
+    uuid = "de9209ca-3cd9-49a1-a3ea-5fea15c31cb5"
     client = build_client
     VCR.use_cassette("users_retrieve") do
       client.login
@@ -38,7 +38,7 @@ class UsersResourceTest < Minitest::Test
 
   def test_update
     uuid = "de9209ca-3cd9-49a1-a3ea-5fea15c31cb5"
-    body = { op: "replace", path: "/canLogin", value: "true" }
+    body = {op: "replace", path: "/canLogin", value: "true"}
     client = build_client
     VCR.use_cassette("users_update") do
       client.login

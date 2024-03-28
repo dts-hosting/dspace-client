@@ -14,7 +14,7 @@ module DSpace
     end
 
     def create(parent:, **attributes)
-      DSpace::Item.new client, post_request(body: attributes, params: { owningCollection: parent }).body
+      DSpace::Item.new client, post_request(body: attributes, params: {owningCollection: parent}).body
     end
 
     def retrieve(uuid:)

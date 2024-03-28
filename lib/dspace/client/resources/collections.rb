@@ -14,7 +14,7 @@ module DSpace
     end
 
     def create(parent:, **attributes)
-      DSpace::Collection.new client, post_request(body: attributes, params: { parent: parent }).body
+      DSpace::Collection.new client, post_request(body: attributes, params: {parent: parent}).body
     end
 
     def retrieve(uuid:)
@@ -29,8 +29,8 @@ module DSpace
       delete_request(uuid)
     end
 
-    def search(method:, **attributes)
-      handle_search(resource: DSpace::Collection, key: "collections", method: method, **attributes)
+    def search(method:, **)
+      handle_search(resource: DSpace::Collection, key: "collections", method: method, **)
     end
 
     def search_admin_authorized
@@ -39,17 +39,17 @@ module DSpace
 
     def search_submit_authorized(metadata)
       handle_search(resource: DSpace::Collection, key: "collections", method: "findSubmitAuthorized",
-                    query: metadata)
+        query: metadata)
     end
 
     def search_submit_authorized_by_community(uuid)
       handle_search(resource: DSpace::Collection, key: "collections",
-                    method: "findSubmitAuthorizedByCommunity", uuid: uuid)
+        method: "findSubmitAuthorizedByCommunity", uuid: uuid)
     end
 
     def search_submit_authorized_by_entity_type(entity_type)
       handle_search(resource: DSpace::Collection, key: "collections",
-                    method: "findSubmitAuthorizedByEntityType", entityType: entity_type)
+        method: "findSubmitAuthorizedByEntityType", entityType: entity_type)
     end
   end
 end

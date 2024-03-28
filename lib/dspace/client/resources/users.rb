@@ -29,13 +29,13 @@ module DSpace
       delete_request(uuid)
     end
 
-    def search(method:, **attributes)
-      handle_search(resource: DSpace::User, key: "epersons", method: method, **attributes)
+    def search(method:, **)
+      handle_search(resource: DSpace::User, key: "epersons", method: method, **)
     end
 
     def search_by_email(email)
       handle_search(resource: DSpace::User, key: "epersons", method: "byEmail", list: false,
-                    email: email)
+        email: email)
     end
 
     def search_by_metadata(metadata)

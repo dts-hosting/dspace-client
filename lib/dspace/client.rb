@@ -40,7 +40,10 @@ require_relative "client/tasks/basic_report"
 # DSpace
 module DSpace
   class ConfigurationError < StandardError; end
+
   class Error < StandardError; end
+
   class InvalidParameterError < StandardError; end
+
   class InvalidSearchError < StandardError; end
 end

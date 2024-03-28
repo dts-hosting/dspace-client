@@ -4,12 +4,12 @@ module DSpace
   # REST API Client
   class Client
     attr_accessor :authorization, :token
-    attr_reader   :config
+    attr_reader :config
 
     def initialize(config:)
       @authorization = nil
-      @config        = config
-      @token         = nil
+      @config = config
+      @token = nil
     end
 
     # Expose basic operations: (get, post, put, delete)
@@ -78,13 +78,13 @@ module DSpace
 
     def connection
       @connection ||= Faraday.new do |conn|
-        conn.url_prefix   = @config.rest_url
+        conn.url_prefix = @config.rest_url
         conn.ssl[:verify] = @config.ssl_verify
 
         conn.adapter @config.adapter, @config.stubs
-        conn.use     :cookie_jar
+        conn.use :cookie_jar
 
-        conn.request  :json
+        conn.request :json
         conn.response :json
       end
     end

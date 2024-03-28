@@ -12,19 +12,17 @@ module DSpace
       @output_file = output_file
     end
 
-    def process(opts: { page_size: 20, throttle: 0 })
+    def process(opts: {page_size: 20, throttle: 0})
       FileUtils.rm_f output_file
       size = opts[:page_size]
       data = Queue.new
 
       client.items.all(embed: "owningCollection/parentCommunity", size: size).each_slice(size) do |items|
         Parallel.map(items, in_threads: THREAD_COUNT) do |item|
-          begin
-            data << collect_stats(item, Time.now.utc.iso8601)
-            sleep opts[:throttle]
-          rescue StandardError => e
-            puts "Error processing item\n#{item.inspect}:\n#{e.message}"
-          end
+          data << collect_stats(item, Time.now.utc.iso8601)
+          sleep opts[:throttle]
+        rescue => e
+          puts "Error processing item\n#{item.inspect}:\n#{e.message}"
         end
         write_data(data.pop) until data.empty?
       end

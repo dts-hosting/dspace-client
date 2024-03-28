@@ -15,7 +15,7 @@ module DSpace
 
     def create(parent: nil, **attributes)
       if parent
-        DSpace::Community.new client, post_request(body: attributes, params: { parent: parent }).body
+        DSpace::Community.new client, post_request(body: attributes, params: {parent: parent}).body
       else
         DSpace::Community.new client, post_request(body: attributes).body
       end
@@ -33,13 +33,13 @@ module DSpace
       delete_request(uuid)
     end
 
-    def search(method:, **attributes)
-      handle_search(resource: DSpace::Community, key: "communities", method: method, **attributes)
+    def search(method:, **)
+      handle_search(resource: DSpace::Community, key: "communities", method: method, **)
     end
 
     def search_by_metadata(metadata)
       handle_search(resource: DSpace::Community, key: "communities", method: "findAdminAuthorized",
-                    query: metadata)
+        query: metadata)
     end
 
     def search_top

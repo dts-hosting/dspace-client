@@ -43,7 +43,7 @@ class ItemsResourceTest < Minitest::Test
   end
 
   def test_retrieve
-    uuid   = "5eb19b24-9a37-4386-858e-131eb3db5c66"
+    uuid = "5eb19b24-9a37-4386-858e-131eb3db5c66"
     client = build_client
     VCR.use_cassette("items_retrieve") do
       item = client.items.retrieve(uuid: uuid)
@@ -54,7 +54,7 @@ class ItemsResourceTest < Minitest::Test
 
   def test_update
     uuid = "5eb19b24-9a37-4386-858e-131eb3db5c66"
-    body = { op: "add", path: "/metadata/dc.contributor.author/0", value: "TEST" }
+    body = {op: "add", path: "/metadata/dc.contributor.author/0", value: "TEST"}
     client = build_client
     VCR.use_cassette("items_update") do
       client.login

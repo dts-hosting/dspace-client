@@ -5,16 +5,16 @@ module DSpace
     attr_reader :client, :endpoint
 
     def initialize(client:, endpoint: nil)
-      @client   = client
+      @client = client
       @endpoint = endpoint || default_endpoint
     end
 
-    def all(**params)
+    def all(**)
       Enumerator.new do |yielder|
-        records = list(page: 0, **params)
+        records = list(page: 0, **)
         records.data.each { |d| yielder << d }
         while records.next_page
-          records = list(page: records.next_page, **params)
+          records = list(page: records.next_page, **)
           records.data.each { |d| yielder << d }
         end
       end.lazy
@@ -68,21 +68,21 @@ module DSpace
     end
 
     def handle_request(req, params:, headers:)
-      req.params  = params
-      req.headers = headers.merge({ "X-XSRF-Token" => client.token })
+      req.params = params
+      req.headers = headers.merge({"X-XSRF-Token" => client.token})
       req.headers["Authorization"] = client.authorization if client.authorization
     end
 
     def handle_request_for_authentication(req)
-      req.body = URI.encode_www_form({ user: client.config.username, password: client.config.password })
+      req.body = URI.encode_www_form({user: client.config.username, password: client.config.password})
       req.headers["Content-Type"] = "application/x-www-form-urlencoded"
       req.headers["X-XSRF-Token"] = client.token
     end
 
     def handle_request_with_payload(req, body:, params:, headers:)
-      req.body    = body
-      req.params  = params
-      req.headers = headers.merge({ "Authorization" => client.authorization, "X-XSRF-Token" => client.token })
+      req.body = body
+      req.params = params
+      req.headers = headers.merge({"Authorization" => client.authorization, "X-XSRF-Token" => client.token})
     end
 
     # rubocop:disable Metrics/AbcSize,Metrics/CyclomaticComplexity,Metrics/MethodLength

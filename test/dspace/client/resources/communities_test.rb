@@ -37,7 +37,7 @@ class CommunitiesResourceTest < Minitest::Test
   end
 
   def test_retrieve
-    uuid   = "41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd"
+    uuid = "41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd"
     client = build_client
     VCR.use_cassette("communities_retrieve") do
       community = client.communities.retrieve(uuid: uuid)
@@ -48,13 +48,13 @@ class CommunitiesResourceTest < Minitest::Test
 
   def test_update
     uuid = "41a47b5c-f63c-4f5a-8d9e-0aeb4803f9fd"
-    body = { op: "replace", path: "/metadata/dc.title/0", value: { value: "DTS.COMMUNITY.002" } }
+    body = {op: "replace", path: "/metadata/dc.title/0", value: {value: "DTS.COMMUNITY.002"}}
     client = build_client
 
     VCR.use_cassette("communities_update") do
       client.login
       assert_equal "DTS.COMMUNITY.002",
-                   client.communities.update(uuid: uuid, **body).metadata["dc.title"].first.value
+        client.communities.update(uuid: uuid, **body).metadata["dc.title"].first.value
     end
   end
 

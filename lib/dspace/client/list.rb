@@ -29,27 +29,27 @@ module DSpace
     end
 
     def initialize(data:, page:, size:, total_elements:, total_pages:)
-      @data           = data
-      @page           = page
-      @size           = size
+      @data = data
+      @page = page
+      @size = size
       @total_elements = total_elements
-      @total_pages    = total_pages
-      @first_page     = 0
-      @next_page      = resolve_next_page(page)
-      @prev_page      = resolve_prev_page(page)
-      @last_page      = resolve_last_page(total_pages)
+      @total_pages = total_pages
+      @first_page = 0
+      @next_page = resolve_next_page(page)
+      @prev_page = resolve_prev_page(page)
+      @last_page = resolve_last_page(total_pages)
     end
 
     def resolve_next_page(page)
-      page + 1 <= resolve_last_page(total_pages) ? (page + 1) : nil
+      (page + 1 <= resolve_last_page(total_pages)) ? (page + 1) : nil
     end
 
     def resolve_prev_page(page)
-      page - 1 >= 0 ? (page - 1) : nil
+      (page - 1 >= 0) ? (page - 1) : nil
     end
 
     def resolve_last_page(total)
-      total - 1 >= 0 ? (total - 1) : 0
+      (total - 1 >= 0) ? (total - 1) : 0
     end
 
     def self.resolve_indexable_type(client, attrs)

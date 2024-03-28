@@ -4,10 +4,10 @@ $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 require "dspace/client"
 
 config = DSpace::Configuration.new(settings: {
-                                     rest_url: ENV.fetch("DSPACE_CLIENT_REST_URL"),
-                                     username: ENV.fetch("DSPACE_CLIENT_USERNAME"),
-                                     password: ENV.fetch("DSPACE_CLIENT_PASSWORD")
-                                   })
+  rest_url: ENV.fetch("DSPACE_CLIENT_REST_URL"),
+  username: ENV.fetch("DSPACE_CLIENT_USERNAME"),
+  password: ENV.fetch("DSPACE_CLIENT_PASSWORD")
+})
 client = DSpace::Client.new(config: config)
 client.login
 
@@ -35,5 +35,5 @@ item = client.items.create(parent: collection.uuid, **body)
 puts "CREATE"
 puts item.inspect
 
-item.bundles.create({ name: "ORIGINAL", metadata: {} })
+item.bundles.create({name: "ORIGINAL", metadata: {}})
 puts item.bundles.list.inspect

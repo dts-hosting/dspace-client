@@ -37,7 +37,7 @@ class CollectionsResourceTest < Minitest::Test
   end
 
   def test_retrieve
-    uuid   = "d1456d11-760e-4760-b1b7-06988506e4b0"
+    uuid = "d1456d11-760e-4760-b1b7-06988506e4b0"
     client = build_client
     VCR.use_cassette("collections_retrieve") do
       collection = client.collections.retrieve(uuid: uuid)
@@ -48,13 +48,13 @@ class CollectionsResourceTest < Minitest::Test
 
   def test_update
     uuid = "d1456d11-760e-4760-b1b7-06988506e4b0"
-    body = { op: "replace", path: "/metadata/dc.title/0",
-             value: { value: "DTS.COLLECTION.002" } }
+    body = {op: "replace", path: "/metadata/dc.title/0",
+            value: {value: "DTS.COLLECTION.002"}}
     client = build_client
     VCR.use_cassette("collections_update") do
       client.login
       assert_equal "DTS.COLLECTION.002",
-                   client.collections.update(uuid: uuid, **body).metadata["dc.title"].first.value
+        client.collections.update(uuid: uuid, **body).metadata["dc.title"].first.value
     end
   end
 

@@ -15,7 +15,7 @@ class BrowsesResourceTest < Minitest::Test
   end
 
   def test_retrieve
-    id     = "dateissued"
+    id = "dateissued"
     client = build_client
     VCR.use_cassette("browses_retrieve") do
       client.login

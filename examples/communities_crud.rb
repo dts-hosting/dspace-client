@@ -25,7 +25,9 @@ body = {
     ]
   }
 }
-community = client.communities.search_by_metadata(body[:name]).data.first
+search = client.communities.search_by_metadata("\"#{body[:name]}\"")
+raise "Expected zero or one community :(" if search.total_elements > 1
+community = search.data.first
 if community&.uuid
   puts "Community already exists"
 else

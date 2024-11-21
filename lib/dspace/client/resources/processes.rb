@@ -8,11 +8,11 @@ module DSpace
       "system/scripts"
     end
 
-    def get (processId)
-        DSpace::Process.new(
-          client,
-          DSpace::Request.new(client: client).get_request("server/api/system/processes/#{processId}").body
-        )
+    def get(proccess_id)
+      DSpace::Process.new(
+        client,
+        DSpace::Request.new(client: client).get_request("server/api/system/processes/#{proccess_id}").body
+      )
     end
   end
 end

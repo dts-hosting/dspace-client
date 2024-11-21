@@ -2,6 +2,5 @@
 
 module DSpace
   class File < Object
-
   end
 end

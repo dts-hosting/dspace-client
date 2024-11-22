@@ -13,7 +13,7 @@ module DSpace
       DSpace::List.from_response(client, response, key: "scripts", type: DSpace::Script)
     end
 
-    def get(name)
+    def retrieve(name:)
       DSpace::Script.new client, get_request(name).body
     end
   end

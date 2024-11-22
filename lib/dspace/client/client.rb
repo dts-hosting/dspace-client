@@ -55,12 +55,12 @@ module DSpace
       DSpace::ItemResource.new(client: self)
     end
 
-    def scripts
-      DSpace::ScriptsResource.new(client: self)
-    end
-
     def processes
       DSpace::ProcessesResource.new(client: self)
+    end
+
+    def scripts
+      DSpace::ScriptsResource.new(client: self)
     end
 
     def search

@@ -6,10 +6,11 @@ module DSpace
     attr_accessor :authorization, :token
     attr_reader :config
 
-    def initialize(config:)
+    def initialize(config:, response: :json)
       @authorization = nil
       @config = config
       @token = nil
+      @response = response
     end
 
     # Expose basic operations: (get, post, put, delete)
@@ -93,7 +94,7 @@ module DSpace
         conn.use :cookie_jar
 
         conn.request :json
-        conn.response :json
+        conn.response @response if @response
       end
     end
   end

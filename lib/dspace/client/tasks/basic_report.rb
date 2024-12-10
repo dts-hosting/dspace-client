@@ -4,7 +4,7 @@ module DSpace
   class BasicReportTask
     attr_reader :client, :output_file
 
-    HEADERS = %w[community collection item visits downloads created updated url date].freeze
+    HEADERS = %w[community collection item visits downloads created updated url date file_types].freeze
     THREAD_COUNT = 8
 
     def initialize(client:, output_file:)
@@ -17,7 +17,7 @@ module DSpace
       size = opts[:page_size]
       data = Queue.new
 
-      client.items.all(embed: "owningCollection/parentCommunity", size: size).each_slice(size) do |items|
+      client.items.all(embed: "owningCollection/parentCommunity,bundles/bitstreams", size: size).each_slice(size) do |items|
         Parallel.map(items, in_threads: THREAD_COUNT) do |item|
           data << collect_stats(item, Time.now.utc.iso8601)
           sleep opts[:throttle]
@@ -43,8 +43,24 @@ module DSpace
         created: item.metadata["dc.date.accessioned"]&.first&.value,
         updated: item.lastModified,
         url: get_stats_url(item),
-        date: date
+        date: date,
+        file_types: get_file_types(item).join(";")
       }
+    end
+
+    def get_file_types(item)
+      item["_embedded"].bundles["_embedded"].bundles.map { |bundle|
+        bundle["_embedded"].bitstreams
+      }.map { |bitstreams|
+        bitstreams["_embedded"]
+      }.each.map { |bitstream|
+        bitstream.bitstreams.each.map { |file|
+          ::File.extname(file.name)
+        }
+      }.flatten.uniq
+    rescue => e
+      puts "Error getting file types:\n#{e.message}"
+      ""
     end
 
     def get_stats_url(data)

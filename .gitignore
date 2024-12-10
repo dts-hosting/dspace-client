@@ -8,4 +8,5 @@
 /tmp/
 *.bak
 .DS_Store
+.idea/
 report.csv

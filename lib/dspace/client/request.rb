@@ -29,8 +29,18 @@ module DSpace
     end
 
     def get_request(path = "", params: {}, headers: {})
-      response = client.connection.get(resolve_path(path)) do |req|
-        handle_request(req, params: params, headers: headers)
+      request_retry = 3
+      response = nil
+      while request_retry > 0
+        response = client.connection.get(resolve_path(path)) do |req|
+          handle_request(req, params: params, headers: headers)
+        end
+        if response.status == 401
+          request_retry -= 1
+          client.login
+        else
+          break
+        end
       end
       refresh_token(response)
       handle_response(response)

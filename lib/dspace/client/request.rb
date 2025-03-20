@@ -29,6 +29,9 @@ module DSpace
     end
 
     def get_request(path = "", params: {}, headers: {})
+      # TODO: accepted with this PR:
+      # https://github.com/dts-hosting/dspace-client/pull/16
+      # Should be refactored and handled more generally for any request
       request_retry = 3
       response = nil
       while request_retry > 0

@@ -12,19 +12,7 @@ config = DSpace::Configuration.new(settings: {
 client = DSpace::Client.new(config: config)
 client.login
 
-require "csv"
-require "FileUtils"
-
-def append_row(file, data)
-  CSV.open(file, "a", encoding: "utf-8") do |row|
-    row << data
-  end
-end
-
-outfile = "handles.csv"
-FileUtils.rm_f outfile
-append_row(outfile, %w[id name handle]) # headers
-
-client.items.all.each do |i|
-  append_row(outfile, [i.id, i.name, i.handle])
-end
+groups = client.groups.search_by_metadata("admin").data
+puts groups
+# for group in groups
+# group = client.groups.retrieve(uuid: users.first.uuid)

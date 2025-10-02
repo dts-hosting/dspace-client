@@ -39,6 +39,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "parallel", "~> 1.23"
 
   spec.add_development_dependency "debug", ">= 1.0.0"
+  spec.add_development_dependency "dotenv", ">= 3.0.0"
+  spec.add_development_dependency "fileutils", ">= 1.7.0"
   spec.add_development_dependency "minitest", ">= 5.0.5"
   spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "ruby-debug-ide"

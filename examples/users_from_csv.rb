@@ -65,14 +65,18 @@ CSV.foreach(csv_file_path, headers: true) do |row|
     puts user.inspect
   end
 
-  # TODO: add user to group(s)
+  # add user to group(s)
   # https://github.com/DSpace/RestContract/blob/main/epersongroups.md
   grouparr = groups.split(",")
   grouparr.each { |group|
     selectgroup = client.groups.search_by_metadata(group).data.first
     puts selectgroup._links.epersons.href
+    selectgroup.add_eperson(eperson_uuid: user.uuid)
+    # uuid = "dc24e354-abe1-4618-95dd-f0f7c3310435"
+    # selectgroup.add_eperson(eperson_uuid: uuid)
   }
 
-  # TODO: send registration
+  # TODO: (OPTIONAL) send registration
   # https://github.com/DSpace/RestContract/blob/main/epersonregistrations.md
+  # if you are not using SSO, send a "forgot" request type to notify the new user
 end

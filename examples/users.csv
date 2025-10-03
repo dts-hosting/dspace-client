@@ -1,3 +1,3 @@
 email,firstname,lastname,groups
-user@institution.edu,Tester,Admin,"Administrator,Test Group"
-admin@institution.edu,Testy,User,Test Group
+admin@institution.edu,Tester,Admin,"Administrator,Test Group"
+user@institution.edu,Testy,User,Test Group

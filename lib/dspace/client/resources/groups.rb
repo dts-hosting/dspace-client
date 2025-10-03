@@ -41,9 +41,5 @@ module DSpace
     def search_by_metadata(metadata)
       handle_search(resource: DSpace::Group, key: "groups", method: "byMetadata", query: metadata)
     end
-
-    def add_eperson
-      # TODO: implement
-    end
   end
 end

@@ -52,6 +52,10 @@ module DSpace
       DSpace::CommunityResource.new(client: self)
     end
 
+    def groups
+      DSpace::GroupResource.new(client: self)
+    end
+
     def items
       DSpace::ItemResource.new(client: self)
     end

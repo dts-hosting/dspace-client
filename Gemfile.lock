@@ -16,6 +16,7 @@ GEM
       reline (>= 0.3.1)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (3.1.8)
     faraday (1.10.3)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -44,6 +45,7 @@ GEM
     faraday-retry (1.0.3)
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
+    fileutils (1.7.3)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
     io-console (0.6.0)
@@ -116,7 +118,9 @@ PLATFORMS
 
 DEPENDENCIES
   debug (>= 1.0.0)
+  dotenv (>= 3.0.0)
   dspace-client!
+  fileutils (>= 1.7.0)
   minitest (>= 5.0.5)
   rake (~> 13.0)
   ruby-debug-ide

@@ -8,7 +8,7 @@ module DSpace
 
     def initialize(client, attributes)
       @client = client
-      super to_ostruct(attributes)
+      super(to_ostruct(attributes))
     end
 
     def to_ostruct(obj)

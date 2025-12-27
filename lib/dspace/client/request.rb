@@ -108,7 +108,7 @@ module DSpace
       when 403
         raise Error, "Not allowed to perform the action. #{response.body["error"]}"
       when 404
-        raise Error, "No results found for request. #{response.body["error"]}"
+        raise Error, "No results found for request. #{client.config.rest_url} returns #{response.status} - #{response.body}"
       when 422
         raise Error, "Unprocessable or invalid entity. #{response.body["error"]}"
       when 429

@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = "DSpace REST API client"
   spec.description = "DSpace REST API client"
   spec.homepage = "https://github.com/DSpaceDirect/dspace-client"
-  spec.required_ruby_version = ">= 2.4.0"
+  spec.required_ruby_version = ">= 3.0"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
@@ -33,9 +33,10 @@ Gem::Specification.new do |spec|
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
 
-  spec.add_dependency "faraday", "~> 1.10"
+  spec.add_dependency "csv"
+  spec.add_dependency "faraday", "~> 2.14"
   spec.add_dependency "faraday-cookie_jar"
-  spec.add_dependency "faraday_middleware", "~> 1.2"
+  spec.add_dependency "ostruct"
   spec.add_dependency "parallel", "~> 1.23"
 
   spec.add_development_dependency "debug", ">= 1.0.0"
@@ -43,7 +44,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "fileutils", ">= 1.7.0"
   spec.add_development_dependency "minitest", ">= 5.0.5"
   spec.add_development_dependency "rake", "~> 13.0"
-  spec.add_development_dependency "ruby-debug-ide"
   spec.add_development_dependency "standard"
   spec.add_development_dependency "vcr", "~> 6.1"
 end

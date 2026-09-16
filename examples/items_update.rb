@@ -15,3 +15,6 @@ item = client.items.list.data.first
 body = {op: "add", path: "/metadata/dc.contributor.author/0", value: "TEST"}
 item = client.items.update(uuid: item.uuid, **body)
 puts item.inspect
+
+collection = item.collection
+puts collection.name

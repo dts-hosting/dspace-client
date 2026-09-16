@@ -4,6 +4,7 @@ module DSpace
   class Collection < Object
     WORKFLOW_ROLES = ["reviewer", "editor", "finaleditor"].freeze
 
+    # TODO: fix. mapped items are not the same as regular items in the collection, so this will usuallly be empty
     def items
       DSpace::ItemResource.new(client: client, endpoint: "core/collections/#{uuid}/mappedItems")
     end

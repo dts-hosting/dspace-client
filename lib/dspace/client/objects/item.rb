@@ -9,7 +9,7 @@ module DSpace
     def collection
       DSpace::Collection.new(
         client,
-        DSpace::Request.new(client: client).get_request("server/api/core/items/#{uuid}/owningCollection").body
+        DSpace::Request.new(client: client).get_request("core/items/#{uuid}/owningCollection").body
       )
     end
   end

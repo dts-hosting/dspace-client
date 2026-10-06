@@ -11,7 +11,7 @@ module DSpace
     def retrieve(process_id:)
       DSpace::Process.new(
         client,
-        DSpace::Request.new(client: client).get_request("server/api/system/processes/#{process_id}").body
+        DSpace::Request.new(client: client).get_request("system/processes/#{process_id}").body
       )
     end
   end

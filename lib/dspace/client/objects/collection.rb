@@ -10,13 +10,11 @@ module DSpace
     end
 
     def get_workflowgroup(workflow_role)
-      response = DSpace::Request.new(client: client).get_request("server/api/core/collections/#{uuid}/workflowGroups/#{workflow_role}")
-      unless response.body.empty?
-        DSpace::Group.new(
-          client,
-          response.body
-        )
-      end
+      response = DSpace::Request.new(client: client).get_request("core/collections/#{uuid}/workflowGroups/#{workflow_role}")
+      # DSpace returns 204 No Content when the workflow role has no group
+      return if response.status == 204
+
+      DSpace::Group.new(client, response.body)
     end
 
     def delete_workflowgroup(workflow_role)

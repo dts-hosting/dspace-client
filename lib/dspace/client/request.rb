@@ -50,7 +50,7 @@ module DSpace
     end
 
     def payload_request(path = "", type:, body:, params: {}, headers: {})
-      response = client.connection.send(resolve_path(path), path) do |req|
+      response = client.connection.public_send(type, resolve_path(path)) do |req|
         handle_request_with_payload(req, body: body, params: params, headers: headers)
       end
       refresh_token(response)
@@ -108,7 +108,7 @@ module DSpace
       when 403
         raise Error, "Not allowed to perform the action. #{response.body["error"]}"
       when 404
-        raise Error, "No results found for request. #{response.url} returns #{response.status} - #{response.body}"
+        raise Error, "No results found for request. #{response.body["error"]}"
       when 422
         raise Error, "Unprocessable or invalid entity. #{response.body["error"]}"
       when 429
@@ -143,7 +143,7 @@ module DSpace
     end
 
     def resolve_path(path)
-      path.empty? ? endpoint : "#{endpoint}/#{path}"
+      [endpoint, path].reject(&:empty?).join("/")
     end
   end
 end

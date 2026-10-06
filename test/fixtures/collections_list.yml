@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://demo.dspacedirect.org/server/api/core/collections
+    uri: <DSPACE_REST_URL>/core/collections
     body:
       encoding: US-ASCII
       string: ''

@@ -2,42 +2,40 @@
 http_interactions:
 - request:
     method: post
-    uri: https://demo.dspacedirect.org/server/api/authn/login
+    uri: <DSPACE_REST_URL>/authn/login
     body:
       encoding: US-ASCII
       string: "<AUTHENTICATION>"
     headers:
       User-Agent:
-      - Faraday v1.10.0
+      - Faraday v2.14.1
       Content-Type:
       - application/x-www-form-urlencoded
       X-XSRF-Token: []
   response:
     status:
       code: 403
-      message: '403'
+      message: ''
     headers:
       date:
-      - Sat, 02 Jul 2022 21:55:06 GMT
+      - Tue, 06 Oct 2026 20:31:07 GMT
       content-type:
       - application/json;charset=UTF-8
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-      server:
-      - Apache/2.4.53 (Unix)
       vary:
-      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
-      set-cookie:
-      - DSPACE-XSRF-COOKIE=408cefc2-9b08-48c9-bd31-04632f0a3869; Path=/server; Secure;
-        HttpOnly; SameSite=None
+      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
       dspace-xsrf-token:
-      - 408cefc2-9b08-48c9-bd31-04632f0a3869
+      - 2877530b-98cd-4e0b-bf4b-1f5a4b9696e9
+      set-cookie:
+      - DSPACE-XSRF-COOKIE=2877530b-98cd-4e0b-bf4b-1f5a4b9696e9; Path=/server; Secure;
+        HttpOnly; SameSite=None
       x-content-type-options:
       - nosniff
       x-xss-protection:
-      - 1; mode=block
+      - '0'
       cache-control:
       - no-cache, no-store, max-age=0, must-revalidate
       pragma:
@@ -45,65 +43,54 @@ http_interactions:
       expires:
       - '0'
       strict-transport-security:
-      - max-age=315360000, max-age=315360000
+      - max-age=31536000 ; includeSubDomains
       x-frame-options:
-      - SAMEORIGIN
-      referrer-policy:
-      - strict-origin-when-cross-origin
-      permissions-policy:
-      - interest-cohort=()
-      content-security-policy:
-      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
-      access-control-expose-headers:
-      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
-        X-Requested-With, DSPACE-XSRF-TOKEN
+      - DENY
     body:
       encoding: UTF-8
-      string: '{"timestamp":"2022-07-02T21:55:06.993+00:00","status":403,"error":"Forbidden","message":"Access
+      string: '{"timestamp":"2026-10-06T20:31:07.668+00:00","status":403,"error":"Forbidden","message":"Access
         is denied. Invalid CSRF token.","path":"/server/api/authn/login"}'
-  recorded_at: Sat, 02 Jul 2022 21:55:06 GMT
+  recorded_at: Tue, 06 Oct 2026 20:31:07 GMT
 - request:
     method: post
-    uri: https://demo.dspacedirect.org/server/api/authn/login
+    uri: <DSPACE_REST_URL>/authn/login
     body:
       encoding: US-ASCII
       string: "<AUTHENTICATION>"
     headers:
       User-Agent:
-      - Faraday v1.10.0
+      - Faraday v2.14.1
       Content-Type:
       - application/x-www-form-urlencoded
       X-XSRF-Token:
-      - 408cefc2-9b08-48c9-bd31-04632f0a3869
+      - 2877530b-98cd-4e0b-bf4b-1f5a4b9696e9
       Cookie:
-      - DSPACE-XSRF-COOKIE=408cefc2-9b08-48c9-bd31-04632f0a3869
+      - DSPACE-XSRF-COOKIE=2877530b-98cd-4e0b-bf4b-1f5a4b9696e9
   response:
     status:
       code: 200
-      message: '200'
+      message: ''
     headers:
       date:
-      - Sat, 02 Jul 2022 21:55:07 GMT
-      transfer-encoding:
-      - chunked
+      - Tue, 06 Oct 2026 20:31:07 GMT
+      content-length:
+      - '0'
       connection:
       - keep-alive
-      server:
-      - Apache/2.4.53 (Unix)
       vary:
-      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
       set-cookie:
-      - DSPACE-XSRF-COOKIE=; Path=/server; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00
-        GMT; Secure; HttpOnly; SameSite=None, DSPACE-XSRF-COOKIE=d38305d7-c0ee-4089-bf66-bebd2efccbce;
+      - DSPACE-XSRF-COOKIE=; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/server;
+        Secure; HttpOnly; SameSite=None, DSPACE-XSRF-COOKIE=211f3ac0-63ec-43fc-8c6b-d3a89e9dbe3f;
         Path=/server; Secure; HttpOnly; SameSite=None
       dspace-xsrf-token:
-      - d38305d7-c0ee-4089-bf66-bebd2efccbce
+      - 211f3ac0-63ec-43fc-8c6b-d3a89e9dbe3f
       authorization:
       - "<TOKEN>"
       x-content-type-options:
       - nosniff
       x-xss-protection:
-      - 1; mode=block
+      - '0'
       cache-control:
       - no-cache, no-store, max-age=0, must-revalidate
       pragma:
@@ -111,58 +98,47 @@ http_interactions:
       expires:
       - '0'
       strict-transport-security:
-      - max-age=315360000, max-age=315360000
+      - max-age=31536000 ; includeSubDomains
       x-frame-options:
-      - SAMEORIGIN
-      referrer-policy:
-      - strict-origin-when-cross-origin
-      permissions-policy:
-      - interest-cohort=()
-      content-security-policy:
-      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
-      access-control-expose-headers:
-      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
-        X-Requested-With, DSPACE-XSRF-TOKEN
+      - DENY
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sat, 02 Jul 2022 21:55:07 GMT
+  recorded_at: Tue, 06 Oct 2026 20:31:07 GMT
 - request:
     method: get
-    uri: https://demo.dspacedirect.org/server/api/eperson/epersons/search/byEmail?email=demo%40dspacedirect.org
+    uri: <DSPACE_REST_URL>/eperson/epersons/search/byEmail?email=admin%40dspacedirect.org
     body:
       encoding: US-ASCII
       string: ''
     headers:
       X-XSRF-Token:
-      - d38305d7-c0ee-4089-bf66-bebd2efccbce
+      - 211f3ac0-63ec-43fc-8c6b-d3a89e9dbe3f
       Authorization:
       - "<TOKEN>"
       Cookie:
-      - DSPACE-XSRF-COOKIE=d38305d7-c0ee-4089-bf66-bebd2efccbce
+      - DSPACE-XSRF-COOKIE=211f3ac0-63ec-43fc-8c6b-d3a89e9dbe3f
   response:
     status:
       code: 200
-      message: '200'
+      message: ''
     headers:
       date:
-      - Sat, 02 Jul 2022 21:55:07 GMT
+      - Tue, 06 Oct 2026 20:31:08 GMT
       content-type:
       - application/hal+json;charset=UTF-8
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-      server:
-      - Apache/2.4.53 (Unix)
       vary:
-      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
       content-language:
       - en
       x-content-type-options:
       - nosniff
       x-xss-protection:
-      - 1; mode=block
+      - '0'
       cache-control:
       - no-cache, no-store, max-age=0, must-revalidate
       pragma:
@@ -170,58 +146,112 @@ http_interactions:
       expires:
       - '0'
       strict-transport-security:
-      - max-age=315360000, max-age=315360000
+      - max-age=31536000 ; includeSubDomains
       x-frame-options:
-      - SAMEORIGIN
-      referrer-policy:
-      - strict-origin-when-cross-origin
-      permissions-policy:
-      - interest-cohort=()
-      content-security-policy:
-      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
-      access-control-expose-headers:
-      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
-        X-Requested-With, DSPACE-XSRF-TOKEN
+      - DENY
     body:
       encoding: UTF-8
-      string: '{"id":"575d0b48-a2f9-4d91-bca4-0ab788392339","uuid":"575d0b48-a2f9-4d91-bca4-0ab788392339","name":"demo@dspacedirect.org","handle":null,"metadata":{"dspace.agreements.cookies":[{"value":"{\"authentication\":true,\"preferences\":true,\"acknowledgement\":true,\"google-analytics\":true}","language":null,"authority":null,"confidence":-1,"place":0}],"dspace.agreements.end-user":[{"value":"true","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.firstname":[{"value":"DSpaceDirect","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.language":[{"value":"en","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"Administrator","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.phone":[{"value":"2157280396","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":"2022-07-02T21:55:07.367+00:00","canLogIn":true,"email":"demo@dspacedirect.org","requireCertificate":false,"selfRegistered":false,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.org/server/api/eperson/epersons/575d0b48-a2f9-4d91-bca4-0ab788392339/groups"},"self":{"href":"https://demo.dspacedirect.org/server/api/eperson/epersons/575d0b48-a2f9-4d91-bca4-0ab788392339"}}}'
-  recorded_at: Sat, 02 Jul 2022 21:55:07 GMT
+      string: |-
+        {
+          "id" : "8cf7d5af-45bb-4a7c-8322-f8e24d36d1d4",
+          "uuid" : "8cf7d5af-45bb-4a7c-8322-f8e24d36d1d4",
+          "name" : "DSpace Admin",
+          "handle" : null,
+          "metadata" : {
+            "dspace.agreements.cookies" : [ {
+              "value" : "{\"authentication\":true,\"preferences\":true,\"acknowledgement\":true,\"google-analytics\":true,\"google-recaptcha\":true,\"accessibility\":true,\"correlation-id\":true}",
+              "language" : null,
+              "authority" : null,
+              "confidence" : -1,
+              "place" : 0
+            } ],
+            "dspace.agreements.end-user" : [ {
+              "value" : "true",
+              "language" : null,
+              "authority" : null,
+              "confidence" : -1,
+              "place" : 0
+            } ],
+            "eperson.firstname" : [ {
+              "value" : "DSpace",
+              "language" : null,
+              "authority" : null,
+              "confidence" : -1,
+              "place" : 0
+            } ],
+            "eperson.language" : [ {
+              "value" : "en",
+              "language" : null,
+              "authority" : null,
+              "confidence" : -1,
+              "place" : 0
+            } ],
+            "eperson.lastname" : [ {
+              "value" : "Admin",
+              "language" : null,
+              "authority" : null,
+              "confidence" : -1,
+              "place" : 0
+            } ],
+            "eperson.phone" : [ {
+              "value" : "000-111-2222",
+              "language" : null,
+              "authority" : null,
+              "confidence" : -1,
+              "place" : 0
+            } ]
+          },
+          "netid" : null,
+          "lastActive" : "2026-10-06T20:31:07.952093Z",
+          "canLogIn" : true,
+          "email" : "admin@dspacedirect.org",
+          "requireCertificate" : false,
+          "selfRegistered" : false,
+          "type" : "eperson",
+          "_links" : {
+            "groups" : {
+              "href" : "<DSPACE_REST_URL>/eperson/epersons/8cf7d5af-45bb-4a7c-8322-f8e24d36d1d4/groups"
+            },
+            "self" : {
+              "href" : "<DSPACE_REST_URL>/eperson/epersons/8cf7d5af-45bb-4a7c-8322-f8e24d36d1d4"
+            }
+          }
+        }
+  recorded_at: Tue, 06 Oct 2026 20:31:08 GMT
 - request:
     method: get
-    uri: https://demo.dspacedirect.org/server/api/eperson/epersons/search/byEmail?email=demo%40dspacedirect.org
+    uri: <DSPACE_REST_URL>/eperson/epersons/search/byEmail?email=admin%40dspacedirect.org
     body:
       encoding: US-ASCII
       string: ''
     headers:
       X-XSRF-Token:
-      - d38305d7-c0ee-4089-bf66-bebd2efccbce
+      - 211f3ac0-63ec-43fc-8c6b-d3a89e9dbe3f
       Authorization:
       - "<TOKEN>"
       Cookie:
-      - DSPACE-XSRF-COOKIE=d38305d7-c0ee-4089-bf66-bebd2efccbce
+      - DSPACE-XSRF-COOKIE=211f3ac0-63ec-43fc-8c6b-d3a89e9dbe3f
   response:
     status:
       code: 200
-      message: '200'
+      message: ''
     headers:
       date:
-      - Sat, 02 Jul 2022 21:55:08 GMT
+      - Tue, 06 Oct 2026 20:31:08 GMT
       content-type:
       - application/hal+json;charset=UTF-8
       transfer-encoding:
       - chunked
       connection:
       - keep-alive
-      server:
-      - Apache/2.4.53 (Unix)
       vary:
-      - Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+      - Origin, Access-Control-Request-Method, Access-Control-Request-Headers
       content-language:
       - en
       x-content-type-options:
       - nosniff
       x-xss-protection:
-      - 1; mode=block
+      - '0'
       cache-control:
       - no-cache, no-store, max-age=0, must-revalidate
       pragma:
@@ -229,20 +259,76 @@ http_interactions:
       expires:
       - '0'
       strict-transport-security:
-      - max-age=315360000, max-age=315360000
+      - max-age=31536000 ; includeSubDomains
       x-frame-options:
-      - SAMEORIGIN
-      referrer-policy:
-      - strict-origin-when-cross-origin
-      permissions-policy:
-      - interest-cohort=()
-      content-security-policy:
-      - 'default-src https: ''unsafe-inline'' ''unsafe-eval'''
-      access-control-expose-headers:
-      - Authorization, expires, Location, Content-Disposition, WWW-Authenticate, Set-Cookie,
-        X-Requested-With, DSPACE-XSRF-TOKEN
+      - DENY
     body:
       encoding: UTF-8
-      string: '{"id":"575d0b48-a2f9-4d91-bca4-0ab788392339","uuid":"575d0b48-a2f9-4d91-bca4-0ab788392339","name":"demo@dspacedirect.org","handle":null,"metadata":{"dspace.agreements.cookies":[{"value":"{\"authentication\":true,\"preferences\":true,\"acknowledgement\":true,\"google-analytics\":true}","language":null,"authority":null,"confidence":-1,"place":0}],"dspace.agreements.end-user":[{"value":"true","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.firstname":[{"value":"DSpaceDirect","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.language":[{"value":"en","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.lastname":[{"value":"Administrator","language":null,"authority":null,"confidence":-1,"place":0}],"eperson.phone":[{"value":"2157280396","language":null,"authority":null,"confidence":-1,"place":0}]},"netid":null,"lastActive":"2022-07-02T21:55:07.367+00:00","canLogIn":true,"email":"demo@dspacedirect.org","requireCertificate":false,"selfRegistered":false,"type":"eperson","_links":{"groups":{"href":"https://demo.dspacedirect.org/server/api/eperson/epersons/575d0b48-a2f9-4d91-bca4-0ab788392339/groups"},"self":{"href":"https://demo.dspacedirect.org/server/api/eperson/epersons/575d0b48-a2f9-4d91-bca4-0ab788392339"}}}'
-  recorded_at: Sat, 02 Jul 2022 21:55:08 GMT
-recorded_with: VCR 6.1.0
+      string: |-
+        {
+          "id" : "8cf7d5af-45bb-4a7c-8322-f8e24d36d1d4",
+          "uuid" : "8cf7d5af-45bb-4a7c-8322-f8e24d36d1d4",
+          "name" : "DSpace Admin",
+          "handle" : null,
+          "metadata" : {
+            "dspace.agreements.cookies" : [ {
+              "value" : "{\"authentication\":true,\"preferences\":true,\"acknowledgement\":true,\"google-analytics\":true,\"google-recaptcha\":true,\"accessibility\":true,\"correlation-id\":true}",
+              "language" : null,
+              "authority" : null,
+              "confidence" : -1,
+              "place" : 0
+            } ],
+            "dspace.agreements.end-user" : [ {
+              "value" : "true",
+              "language" : null,
+              "authority" : null,
+              "confidence" : -1,
+              "place" : 0
+            } ],
+            "eperson.firstname" : [ {
+              "value" : "DSpace",
+              "language" : null,
+              "authority" : null,
+              "confidence" : -1,
+              "place" : 0
+            } ],
+            "eperson.language" : [ {
+              "value" : "en",
+              "language" : null,
+              "authority" : null,
+              "confidence" : -1,
+              "place" : 0
+            } ],
+            "eperson.lastname" : [ {
+              "value" : "Admin",
+              "language" : null,
+              "authority" : null,
+              "confidence" : -1,
+              "place" : 0
+            } ],
+            "eperson.phone" : [ {
+              "value" : "000-111-2222",
+              "language" : null,
+              "authority" : null,
+              "confidence" : -1,
+              "place" : 0
+            } ]
+          },
+          "netid" : null,
+          "lastActive" : "2026-10-06T20:31:07.952093Z",
+          "canLogIn" : true,
+          "email" : "admin@dspacedirect.org",
+          "requireCertificate" : false,
+          "selfRegistered" : false,
+          "type" : "eperson",
+          "_links" : {
+            "groups" : {
+              "href" : "<DSPACE_REST_URL>/eperson/epersons/8cf7d5af-45bb-4a7c-8322-f8e24d36d1d4/groups"
+            },
+            "self" : {
+              "href" : "<DSPACE_REST_URL>/eperson/epersons/8cf7d5af-45bb-4a7c-8322-f8e24d36d1d4"
+            }
+          }
+        }
+  recorded_at: Tue, 06 Oct 2026 20:31:08 GMT
+recorded_with: VCR 6.4.0

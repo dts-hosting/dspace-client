@@ -9,7 +9,7 @@ module DSpace
       bitstream_client.login
 
       DSpace::Request.new(client: bitstream_client).get_request(
-        "server/api/core/bitstreams/#{uuid}/content",
+        "core/bitstreams/#{uuid}/content",
         headers: headers
       ).body
     end

@@ -26,7 +26,7 @@ client.status # authenticated (assuming credentials are correct)
 
 See also the `examples` folder. To run the examples you'll need to define some ENV variables:
 
-- DSPACE_CLIENT_REST_URL : https://example.dspace.org/server/api
+- DSPACE_CLIENT_REST_URL : <https://example.dspace.org/server/api>
 - DSPACE_CLIENT_USERNAME : admin
 - DSPACE_CLIENT_PASSWORD : admin
 
@@ -49,9 +49,13 @@ bundle exec rake
 bundle exec rubocop
 ```
 
-However the tests / fixtures are run & generated against a live service
-and therefore the `DSPACE_*` env variables are required (and required to be
-correct [meaning the same as was used to generate the fixture]).
+The tests replay recorded fixtures (`test/fixtures`) and don't need any env
+variables. Fixtures store the REST URL as a `<DSPACE_REST_URL>` placeholder,
+and credentials and tokens are filtered, so they replay against any `rest_url`.
+
+To record a new fixture, set the `DSPACE_CLIENT_*` env variables for a live
+service (recording is disabled when they're not set). To re-record an existing
+fixture, delete its file and run the test again.
 
 In the future the goal is to target a sandbox server that doesn't
 require hidden credentials so new tests / fixtures can be added without
@@ -59,4 +63,4 @@ obfuscating the login details.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/DSpaceDirect/dspace-client.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/DSpaceDirect/dspace-client>.
